@@ -1,0 +1,14 @@
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\bin\Debug\seminarioProyecto.exe.config
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\bin\Debug\seminarioProyecto.exe
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\bin\Debug\seminarioProyecto.pdb
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.csproj.AssemblyReference.cache
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.Form1.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.Properties.Resources.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.csproj.GenerateResource.cache
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.exe
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.pdb
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.Convocatorias.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.Postulantes.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.HistorialConvocatorias.resources
