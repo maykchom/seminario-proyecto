@@ -36,6 +36,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -44,7 +45,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1016, 737);
+            this.pictureBox1.Size = new System.Drawing.Size(1016, 669);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -54,13 +55,15 @@
             this.btCrearConvo.BackColor = System.Drawing.Color.White;
             this.btCrearConvo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCrearConvo.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btCrearConvo.FlatAppearance.BorderSize = 0;
             this.btCrearConvo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btCrearConvo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btCrearConvo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCrearConvo.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btCrearConvo.Location = new System.Drawing.Point(364, 287);
+            this.btCrearConvo.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.btCrearConvo.Location = new System.Drawing.Point(312, 203);
+            this.btCrearConvo.Margin = new System.Windows.Forms.Padding(0);
             this.btCrearConvo.Name = "btCrearConvo";
-            this.btCrearConvo.Size = new System.Drawing.Size(82, 24);
+            this.btCrearConvo.Size = new System.Drawing.Size(86, 21);
             this.btCrearConvo.TabIndex = 1;
             this.btCrearConvo.Text = "Entrar";
             this.btCrearConvo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -74,13 +77,14 @@
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(873, 287);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.button2.Location = new System.Drawing.Point(822, 203);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 24);
+            this.button2.Size = new System.Drawing.Size(86, 21);
             this.button2.TabIndex = 1;
             this.button2.Text = "Entrar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -93,13 +97,14 @@
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(364, 507);
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.button3.Location = new System.Drawing.Point(312, 366);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 24);
+            this.button3.Size = new System.Drawing.Size(86, 21);
             this.button3.TabIndex = 1;
             this.button3.Text = "Entrar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -112,13 +117,14 @@
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(873, 507);
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.button4.Location = new System.Drawing.Point(822, 366);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(82, 24);
+            this.button4.Size = new System.Drawing.Size(86, 21);
             this.button4.TabIndex = 1;
             this.button4.Text = "Entrar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -128,27 +134,28 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btCrearConvo);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1016, 737);
+            this.panel1.Size = new System.Drawing.Size(1016, 669);
             this.panel1.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 737);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btCrearConvo);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1016, 669);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
