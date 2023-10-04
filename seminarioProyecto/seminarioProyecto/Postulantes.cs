@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace seminarioProyecto
 {
-    public partial class Postulantes : Form
+    public partial class postulantes : Form
     {
-        public Postulantes()
+        public postulantes()
         {
             InitializeComponent();
         }

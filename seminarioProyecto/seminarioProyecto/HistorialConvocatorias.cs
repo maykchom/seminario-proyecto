@@ -10,15 +10,21 @@ using System.Windows.Forms;
 
 namespace seminarioProyecto
 {
-    public partial class HistorialConvocatorias : Form
+    public partial class historialConvocatorias : Form
     {
-        public HistorialConvocatorias()
+
+        public historialConvocatorias()
         {
             InitializeComponent();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            if (this.ParentForm is convocatorias formularioPadre)
+            {
+                formularioPadre.panelAlFondo();
+            }
+
             this.Close();
         }
     }

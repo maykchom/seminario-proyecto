@@ -7,19 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using capaNegocias;
 
 namespace seminarioProyecto
 {
-    public partial class Convocatorias : Form
+    public partial class convocatorias : Form
     {
-        public Convocatorias()
+        private Form formularioHijoActual;
+        string idConvo;
+        public convocatorias()
         {
             InitializeComponent();
-        }        
+            cargarPuestos(cbPuestoAgregar);           
+            cargarConvocatorias();
+        }
+
+        private void abrirFormularioHijo(Form formularioHijo)
+        {
+            if (formularioHijoActual != null)
+            {
+                //Abrir solo un formulario
+                formularioHijoActual.Close();
+            }
+            formularioHijoActual = formularioHijo;
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panel1.Controls.Add(formularioHijo);
+            panel1.Tag = formularioHijo;
+            formularioHijo.BringToFront();
+            formularioHijo.Show();
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (this.ParentForm is Form1 formularioPadre)
+            if (this.ParentForm is menuAdmin formularioPadre)
             {
                 formularioPadre.panelAlFondo();
             }
@@ -29,9 +51,130 @@ namespace seminarioProyecto
 
         private void btCrearConvo_Click(object sender, EventArgs e)
         {
-            HistorialConvocatorias hc = new HistorialConvocatorias();
-            hc.ShowDialog();
-            //this.Hide();
+            abrirFormularioHijo(new historialConvocatorias());
+            panel1.BringToFront();
+        }
+
+        public void panelAlFondo()
+        {
+            panel1.SendToBack();
+            //MessageBox.Show("hola");
+
+        }
+
+        public void cargarPuestos(ComboBox cbPuesto)
+        {
+            DataTable dtz = new DataTable();
+            dtz.Clear();
+            dtz = capaNegocias.convocatorias.cargarPuestos();
+            cbPuesto.DisplayMember = "TITULO";
+            cbPuesto.ValueMember = "ID_PUESTO";
+            cbPuesto.DataSource = dtz;
+        }
+
+        private void cargarConvocatorias()
+        {
+            DataTable dtConvo;
+            dtConvo = capaNegocias.convocatorias.obtenerConvocatorias();
+            dgvConvo.DataSource = dtConvo;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime fechaInicio = dtpFI1.Value;
+            DateTime fechaFin = dtpFI2.Value;
+            string obser = tbObser1.Text;
+            int idPuesto = Convert.ToInt32(cbPuestoAgregar.SelectedValue);            
+            int a = 1;
+
+            if (capaNegocias.convocatorias.crearConovocatoria(fechaInicio, fechaFin, obser, idPuesto, sesion.id_usuario))
+            {
+                cargarConvocatorias();
+                limpiarCampos();
+                MessageBox.Show("Convocatoria creada exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Convocatoria no creada, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvConvo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            gbAgregarConvo.Text = "Editar convocatoria";
+            btNuevo.Visible = true;
+            btnGuardar.Visible = false;
+            btnEditar.Visible = true;
+            btnImprimir.Visible = true;
+            btnEliminar.Visible = true;
+
+            int RowNo;
+            RowNo = e.RowIndex;
+            dtpFI1.Value = Convert.ToDateTime(dgvConvo.Rows[RowNo].Cells[4].Value);
+            dtpFI2.Value = Convert.ToDateTime(dgvConvo.Rows[RowNo].Cells[5].Value);
+            cbPuestoAgregar.SelectedValue = Convert.ToInt32(dgvConvo.Rows[RowNo].Cells[1].Value);
+            tbObser1.Text = dgvConvo.Rows[RowNo].Cells[6].Value.ToString();
+            idConvo = dgvConvo.Rows[RowNo].Cells[0].Value.ToString();
+            //txtTerritorioID.Text = dgTerritorios.Rows[RowNo].Cells[0].Value.ToString();
+        }
+
+        public void limpiarCampos()
+        {
+            gbAgregarConvo.Text = "Nueva convocatoria";
+            btNuevo.Visible = false;
+            btnGuardar.Visible = true;
+            btnEditar.Visible = false;
+            btnImprimir.Visible = false;
+            btnEliminar.Visible = false;
+            dtpFI1.Value = DateTime.Now;
+            dtpFI2.Value = DateTime.Now;
+            cbPuestoAgregar.SelectedIndex = 0;
+            tbObser1.Clear();
+            dgvConvo.ClearSelection();
+            tbObser1.Focus();
+        }
+
+        private void btNuevo_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DateTime fechaInicio = dtpFI1.Value;
+            DateTime fechaFin = dtpFI2.Value;
+            string obser = tbObser1.Text;
+            int idPuesto = Convert.ToInt32(cbPuestoAgregar.SelectedValue);            
+
+            if (capaNegocias.convocatorias.editarConvocatoria(fechaInicio, fechaFin, obser, idPuesto, idConvo))
+            {
+                cargarConvocatorias();
+                limpiarCampos();
+                MessageBox.Show("Convocatoria editado exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Convocatoria no editada, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Realmente quiere eliminar la convocatoria?", "Eliminar...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (capaNegocias.convocatorias.eliminarConvocatoria(idConvo))
+                {
+                    cargarConvocatorias();
+                    limpiarCampos();
+                    MessageBox.Show("Convocatoria eliminada exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Convocatoria no eliminada, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

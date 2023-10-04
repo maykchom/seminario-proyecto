@@ -1,6 +1,6 @@
 ﻿namespace seminarioProyecto
 {
-    partial class Postulantes
+    partial class postulantes
     {
         /// <summary>
         /// Required designer variable.
