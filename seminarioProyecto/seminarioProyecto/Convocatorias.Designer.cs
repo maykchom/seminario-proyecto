@@ -36,23 +36,23 @@
             this.cbPuestoAgregar = new System.Windows.Forms.ComboBox();
             this.tbObser1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpFI1 = new System.Windows.Forms.DateTimePicker();
-            this.dtpFI2 = new System.Windows.Forms.DateTimePicker();
-            this.dgvConvo = new System.Windows.Forms.DataGridView();
             this.gbAgregarConvo = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btNuevo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpFI2 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpFI1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.dgvConvo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConvo)).BeginInit();
             this.gbAgregarConvo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConvo)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -154,76 +154,6 @@
             this.panel1.Size = new System.Drawing.Size(1016, 669);
             this.panel1.TabIndex = 8;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Fecha de inicio";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(379, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Fecha de finalización";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(716, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Puesto";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 17);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Observaciones";
-            // 
-            // dtpFI1
-            // 
-            this.dtpFI1.Location = new System.Drawing.Point(17, 44);
-            this.dtpFI1.Name = "dtpFI1";
-            this.dtpFI1.Size = new System.Drawing.Size(231, 21);
-            this.dtpFI1.TabIndex = 10;
-            // 
-            // dtpFI2
-            // 
-            this.dtpFI2.Location = new System.Drawing.Point(382, 44);
-            this.dtpFI2.Name = "dtpFI2";
-            this.dtpFI2.Size = new System.Drawing.Size(234, 21);
-            this.dtpFI2.TabIndex = 10;
-            // 
-            // dgvConvo
-            // 
-            this.dgvConvo.AllowUserToAddRows = false;
-            this.dgvConvo.AllowUserToDeleteRows = false;
-            this.dgvConvo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvConvo.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgvConvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvConvo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConvo.Location = new System.Drawing.Point(24, 69);
-            this.dgvConvo.Name = "dgvConvo";
-            this.dgvConvo.RowHeadersVisible = false;
-            this.dgvConvo.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConvo.Size = new System.Drawing.Size(969, 267);
-            this.dgvConvo.TabIndex = 11;
-            this.dgvConvo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConvo_CellClick);
-            // 
             // gbAgregarConvo
             // 
             this.gbAgregarConvo.Controls.Add(this.btnEditar);
@@ -266,24 +196,24 @@
             this.btnEditar.Visible = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnImprimir
+            // btnEliminar
             // 
-            this.btnImprimir.BackColor = System.Drawing.Color.White;
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnImprimir.Location = new System.Drawing.Point(860, 623);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(133, 30);
-            this.btnImprimir.TabIndex = 2;
-            this.btnImprimir.Text = "Imprimir afiche";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImprimir.UseVisualStyleBackColor = false;
-            this.btnImprimir.Visible = false;
-            this.btnImprimir.Click += new System.EventHandler(this.btCrearConvo_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.Location = new System.Drawing.Point(846, 174);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(86, 30);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btNuevo
             // 
@@ -304,24 +234,94 @@
             this.btNuevo.Visible = false;
             this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
             // 
-            // btnEliminar
+            // label1
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.Location = new System.Drawing.Point(846, 174);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(86, 30);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Visible = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Fecha de inicio";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(379, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Fecha de finalización";
+            // 
+            // dtpFI2
+            // 
+            this.dtpFI2.Location = new System.Drawing.Point(382, 44);
+            this.dtpFI2.Name = "dtpFI2";
+            this.dtpFI2.Size = new System.Drawing.Size(234, 21);
+            this.dtpFI2.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(716, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Puesto";
+            // 
+            // dtpFI1
+            // 
+            this.dtpFI1.Location = new System.Drawing.Point(17, 44);
+            this.dtpFI1.Name = "dtpFI1";
+            this.dtpFI1.Size = new System.Drawing.Size(231, 21);
+            this.dtpFI1.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Observaciones";
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.White;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnImprimir.Location = new System.Drawing.Point(860, 623);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(133, 30);
+            this.btnImprimir.TabIndex = 2;
+            this.btnImprimir.Text = "Imprimir afiche";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Visible = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btCrearConvo_Click);
+            // 
+            // dgvConvo
+            // 
+            this.dgvConvo.AllowUserToAddRows = false;
+            this.dgvConvo.AllowUserToDeleteRows = false;
+            this.dgvConvo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvConvo.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvConvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvConvo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConvo.Location = new System.Drawing.Point(24, 95);
+            this.dgvConvo.Name = "dgvConvo";
+            this.dgvConvo.RowHeadersVisible = false;
+            this.dgvConvo.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConvo.Size = new System.Drawing.Size(969, 241);
+            this.dgvConvo.TabIndex = 11;
+            this.dgvConvo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConvo_CellClick);
             // 
             // convocatorias
             // 
@@ -336,9 +336,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConvo)).EndInit();
             this.gbAgregarConvo.ResumeLayout(false);
             this.gbAgregarConvo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConvo)).EndInit();
             this.ResumeLayout(false);
 
         }

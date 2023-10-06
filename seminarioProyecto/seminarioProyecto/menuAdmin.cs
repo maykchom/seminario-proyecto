@@ -101,5 +101,17 @@ namespace seminarioProyecto
             //MessageBox.Show("hola");
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new postulantes());
+            panel1.BringToFront();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new asignarPostulacion());
+            panel1.BringToFront();
+        }
     }
 }

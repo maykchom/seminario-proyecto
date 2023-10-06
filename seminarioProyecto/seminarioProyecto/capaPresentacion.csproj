@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="asignarPostulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="asignarPostulacion.Designer.cs">
+      <DependentUpon>asignarPostulacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="convocatorias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="convocatorias.Designer.cs">
       <DependentUpon>convocatorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entrevista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entrevista.Designer.cs">
+      <DependentUpon>entrevista.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -84,8 +96,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="asignarPostulacion.resx">
+      <DependentUpon>asignarPostulacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="convocatorias.resx">
       <DependentUpon>convocatorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entrevista.resx">
+      <DependentUpon>entrevista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

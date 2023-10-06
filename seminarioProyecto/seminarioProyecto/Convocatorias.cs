@@ -86,7 +86,6 @@ namespace seminarioProyecto
             DateTime fechaFin = dtpFI2.Value;
             string obser = tbObser1.Text;
             int idPuesto = Convert.ToInt32(cbPuestoAgregar.SelectedValue);            
-            int a = 1;
 
             if (capaNegocias.convocatorias.crearConovocatoria(fechaInicio, fechaFin, obser, idPuesto, sesion.id_usuario))
             {
