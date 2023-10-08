@@ -48,3 +48,5 @@ C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioPro
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\capaPresentacion.csproj.CopyComplete
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.menuSecre.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.asignarPostulacion.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.entrevista.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.entrevistaEjecucion.resources

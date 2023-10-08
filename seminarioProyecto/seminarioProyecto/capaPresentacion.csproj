@@ -64,6 +64,12 @@
     <Compile Include="entrevista.Designer.cs">
       <DependentUpon>entrevista.cs</DependentUpon>
     </Compile>
+    <Compile Include="entrevistaEjecucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entrevistaEjecucion.Designer.cs">
+      <DependentUpon>entrevistaEjecucion.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="entrevista.resx">
       <DependentUpon>entrevista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="entrevistaEjecucion.resx">
+      <DependentUpon>entrevistaEjecucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

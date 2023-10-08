@@ -113,5 +113,11 @@ namespace seminarioProyecto
             abrirFormularioHijo(new asignarPostulacion());
             panel1.BringToFront();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new entrevista());
+            panel1.BringToFront();
+        }
     }
 }

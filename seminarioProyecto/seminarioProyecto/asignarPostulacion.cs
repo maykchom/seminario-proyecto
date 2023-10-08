@@ -34,6 +34,7 @@ namespace seminarioProyecto
             dgvPost.Columns[4].Visible = false;
             dgvPost.Columns[5].Visible = false;
             dgvPost.Columns[6].Visible = false;
+            dgvPost.Columns[7].Visible = false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -94,6 +94,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="convocatorias.cs" />
+    <Compile Include="entrevistaEjecucion.cs" />
+    <Compile Include="entrevistas.cs" />
     <Compile Include="metodosComunes.cs" />
     <Compile Include="postulaciones.cs" />
     <Compile Include="postulantes.cs" />

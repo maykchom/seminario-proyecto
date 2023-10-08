@@ -312,14 +312,14 @@
             this.dgvConvo.AllowUserToAddRows = false;
             this.dgvConvo.AllowUserToDeleteRows = false;
             this.dgvConvo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvConvo.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgvConvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvConvo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvConvo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvConvo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConvo.Location = new System.Drawing.Point(24, 95);
+            this.dgvConvo.Location = new System.Drawing.Point(24, 65);
             this.dgvConvo.Name = "dgvConvo";
             this.dgvConvo.RowHeadersVisible = false;
             this.dgvConvo.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConvo.Size = new System.Drawing.Size(969, 241);
+            this.dgvConvo.Size = new System.Drawing.Size(969, 271);
             this.dgvConvo.TabIndex = 11;
             this.dgvConvo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConvo_CellClick);
             // 
