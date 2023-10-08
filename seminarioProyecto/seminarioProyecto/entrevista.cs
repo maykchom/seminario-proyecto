@@ -47,7 +47,7 @@ namespace seminarioProyecto
             cb.ValueMember = "ID_PUESTO";
             cb.DataSource = dtz;
         }
-        private void cargarPostulantes()
+        public void cargarPostulantes()
         {
             DataTable dtPostu;
             dtPostu = capaNegocias.entrevistas.obtenerPostulantes(Convert.ToInt32(cbPuestos.SelectedValue));
@@ -127,6 +127,12 @@ namespace seminarioProyecto
             capaNegocias.entrevistaEjecucion.idPuestoEntrevista = Convert.ToInt32(cbPuestos.SelectedValue);
             capaNegocias.entrevistaEjecucion.idPostulacionEntrevista = idPostulacionEntre;
             btnRealizarEntrevista.Enabled = true;
+        }
+
+        public void deseleccionarDg()
+        {
+            dgvPost.ClearSelection();
+            btnRealizarEntrevista.Enabled = false;
         }
     }
 }

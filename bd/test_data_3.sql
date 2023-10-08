@@ -1,3 +1,4 @@
+-- USE db_sp;
 USE db_sp;
 
 INSERT INTO ESTADOS (ESTADO) VALUES
@@ -61,34 +62,34 @@ INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES
 
 -- Respuestas para las preguntas del puesto de "Vendedor"
 -- Pregunta 1
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Sí', 1, 1),
-    ('No', 1, 1),
-    ('A veces', 1, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Sí', 1, 1, 1),
+    ('No', 2, 1, 1),
+    ('A veces', 3, 1, 1);
 
 -- Pregunta 2
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Sí', 2, 1),
-    ('No', 2, 1),
-    ('Depende de la situación', 2, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Sí', 1, 2, 1),
+    ('No', 2, 2, 1),
+    ('Depende de la situación', 3, 2, 1);
 
 -- Pregunta 3
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Abordaría sus necesidades con amabilidad', 3, 1),
-    ('Utilizaría técnicas de persuasión efectivas', 3, 1),
-    ('Escucharía sus necesidades y ofrecería soluciones', 3, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Abordaría sus necesidades con amabilidad', 1, 3, 1),
+    ('Utilizaría técnicas de persuasión efectivas', 2, 3, 1),
+    ('Escucharía sus necesidades y ofrecería soluciones', 3, 3, 1);
 
 -- Pregunta 4
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Utilizo técnicas de persuasión efectivas', 4, 1),
-    ('Soy empático y ofrezco soluciones', 4, 1),
-    ('Destaco los beneficios del producto', 4, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Utilizo técnicas de persuasión efectivas', 1, 4, 1),
+    ('Soy empático y ofrezco soluciones', 2, 4, 1),
+    ('Destaco los beneficios del producto', 3, 4, 1);
 
 -- Pregunta 5
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Manejo objeciones de manera profesional', 5, 1),
-    ('Sigo vendiendo con paciencia', 5, 1),
-    ('Ofrezco alternativas cuando hay objeciones', 5, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Manejo objeciones de manera profesional', 1, 5, 1),
+    ('Sigo vendiendo con paciencia', 2, 5, 1),
+    ('Ofrezco alternativas cuando hay objeciones', 3, 5, 1);
 
 -- Preguntas para el puesto de "Encargado de Producto Pequeño"
 INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES
@@ -100,34 +101,34 @@ INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES
 
 -- Respuestas para las preguntas del puesto de "Encargado de Producto Pequeño"
 -- Pregunta 6
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Sí', 6, 1),
-    ('No', 6, 1),
-    ('A veces', 6, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Sí', 1, 6, 1),
+    ('No', 2, 6, 1),
+    ('A veces', 3, 6, 1);
 
 -- Pregunta 7
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Tengo experiencia en organización de espacios reducidos', 7, 1),
-    ('Siempre mantengo productos disponibles', 7, 1),
-    ('Soy meticuloso en la organización', 7, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Tengo experiencia en organización de espacios reducidos', 1, 7, 1),
+    ('Siempre mantengo productos disponibles', 2, 7, 1),
+    ('Soy meticuloso en la organización', 3, 7, 1);
 
 -- Pregunta 8
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Productos siempre disponibles y accesibles', 8, 1),
-    ('Sé cómo anticipar la demanda de productos pequeños', 8, 1),
-    ('Garantizo un flujo constante de productos pequeños', 8, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Productos siempre disponibles y accesibles', 1, 8, 1),
+    ('Sé cómo anticipar la demanda de productos pequeños', 2, 8, 1),
+    ('Garantizo un flujo constante de productos pequeños', 3, 8, 1);
 
 -- Pregunta 9
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Sí, experiencia con productos perecederos', 9, 1),
-    ('Gestiono productos perecederos de manera eficiente', 9, 1),
-    ('Conozco las medidas de conservación de productos perecederos', 9, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Sí, experiencia con productos perecederos', 1, 9, 1),
+    ('Gestiono productos perecederos de manera eficiente', 2, 9, 1),
+    ('Conozco las medidas de conservación de productos perecederos', 3, 9, 1);
 
 -- Pregunta 10
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Optimizo el espacio con estanterías', 10, 1),
-    ('Utilizo sistemas de almacenamiento eficientes', 10, 1),
-    ('Maximizo el uso del espacio disponible', 10, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Optimizo el espacio con estanterías', 1, 10, 1),
+    ('Utilizo sistemas de almacenamiento eficientes', 2, 10, 1),
+    ('Maximizo el uso del espacio disponible', 3, 10, 1);
 
 -- Preguntas para el puesto de "Encargado de Bodega"
 INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES
@@ -139,34 +140,34 @@ INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES
 
 -- Respuestas para las preguntas del puesto de "Encargado de Bodega"
 -- Pregunta 11
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Sí', 11, 1),
-    ('No', 11, 1),
-    ('A veces', 11, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Sí', 1, 11, 1),
+    ('No', 2, 11, 1),
+    ('A veces', 3, 11, 1);
 
 -- Pregunta 12
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('He supervisado operaciones de bodega con éxito', 12, 1),
-    ('Tengo experiencia en la gestión de personal de bodega', 12, 1),
-    ('Soy meticuloso en la organización de productos', 12, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('He supervisado operaciones de bodega con éxito', 1, 12, 1),
+    ('Tengo experiencia en la gestión de personal de bodega', 2, 12, 1),
+    ('Soy meticuloso en la organización de productos', 3, 12, 1);
 
 -- Pregunta 13
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Productos correctamente etiquetados y almacenados', 13, 1),
-    ('Utilizo sistemas de gestión de inventario', 13, 1),
-    ('Sigo protocolos de almacenamiento precisos', 13, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Productos correctamente etiquetados y almacenados', 1, 13, 1),
+    ('Utilizo sistemas de gestión de inventario', 2, 13, 1),
+    ('Sigo protocolos de almacenamiento precisos', 3, 13, 1);
 
 -- Pregunta 14
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('He gestionado equipos de bodega', 14, 1),
-    ('Tengo experiencia en la capacitación de personal de bodega', 14, 1),
-    ('Fomento un ambiente de trabajo eficiente', 14, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('He gestionado equipos de bodega', 1, 14, 1),
+    ('Tengo experiencia en la capacitación de personal de bodega', 2, 14, 1),
+    ('Fomento un ambiente de trabajo eficiente', 3, 14, 1);
 
 -- Pregunta 15
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Optimizo el flujo de productos en la bodega', 15, 1),
-    ('Utilizo sistemas de seguimiento de inventario', 15, 1),
-    ('Minimizo el tiempo de almacenamiento de productos', 15, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Optimizo el flujo de productos en la bodega', 1, 15, 1),
+    ('Utilizo sistemas de seguimiento de inventario', 2, 15, 1),
+    ('Minimizo el tiempo de almacenamiento de productos', 3, 15, 1);
 
 -- Preguntas para el puesto de "Asistente de Bodega Administrativo"
 INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES
@@ -178,34 +179,34 @@ INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES
 
 -- Respuestas para las preguntas del puesto de "Asistente de Bodega Administrativo"
 -- Pregunta 16
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Apoyaría con documentación y registro', 16, 1),
-    ('Tengo experiencia en documentación de bodega', 16, 1),
-    ('Utilizo sistemas de seguimiento de inventario', 16, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Apoyaría con documentación y registro', 1, 16, 1),
+    ('Tengo experiencia en documentación de bodega', 2, 16, 1),
+    ('Utilizo sistemas de seguimiento de inventario', 3, 16, 1);
 
 -- Pregunta 17
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Registro y seguimiento precisos de productos', 17, 1),
-    ('Genero informes de inventario detallados', 17, 1),
-    ('Documentación y registro meticuloso', 17, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Registro y seguimiento precisos de productos', 1, 17, 1),
+    ('Genero informes de inventario detallados', 2, 17, 1),
+    ('Documentación y registro meticuloso', 3, 17, 1);
 
 -- Pregunta 18
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Gestiono registros de entrada y salida', 18, 1),
-    ('Utilizo sistemas de seguimiento en tiempo real', 18, 1),
-    ('Mantengo registros actualizados de productos', 18, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Gestiono registros de entrada y salida', 1, 18, 1),
+    ('Utilizo sistemas de seguimiento en tiempo real', 2, 18, 1),
+    ('Mantengo registros actualizados de productos', 3, 18, 1);
 
 -- Pregunta 19
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Sí, genero informes de inventario', 19, 1),
-    ('Tengo experiencia en la presentación de informes', 19, 1),
-    ('Informes precisos y oportunos', 19, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Sí, genero informes de inventario', 1, 19, 1),
+    ('Tengo experiencia en la presentación de informes', 2, 19, 1),
+    ('Informes precisos y oportunos', 3, 19, 1);
 
 -- Pregunta 20
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Productos siempre registrados y organizados', 20, 1),
-    ('Mantengo registros meticulosos', 20, 1),
-    ('Utilizo software de gestión de inventario', 20, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Productos siempre registrados y organizados', 1, 20, 1),
+    ('Mantengo registros meticulosos', 2, 20, 1),
+    ('Utilizo software de gestión de inventario', 3, 20, 1);
 
 
 -- Preguntas para el puesto de "Asistente de Bodega"
@@ -218,34 +219,34 @@ INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES
 
 -- Respuestas para las preguntas del puesto de "Asistente de Bodega"
 -- Pregunta 21
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Colaboro en operaciones de bodega', 21, 1),
-    ('Tengo experiencia en organización de bodega', 21, 1),
-    ('Maximizo la disponibilidad de productos', 21, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Colaboro en operaciones de bodega', 1, 21, 1),
+    ('Tengo experiencia en organización de bodega', 2, 21, 1),
+    ('Maximizo la disponibilidad de productos', 3, 21, 1);
 
 -- Pregunta 22
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Mantengo orden y limpieza en el área de bodega', 22, 1),
-    ('Cuido la organización de productos en la bodega', 22, 1),
-    ('Experiencia en mantenimiento de áreas de almacenamiento', 22, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Mantengo orden y limpieza en el área de bodega', 1, 22, 1),
+    ('Cuido la organización de productos en la bodega', 2, 22, 1),
+    ('Experiencia en mantenimiento de áreas de almacenamiento', 3, 22, 1);
 
 -- Pregunta 23
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Siempre disponibles y accesibles para el equipo', 23, 1),
-    ('Optimizo el espacio de almacenamiento', 23, 1),
-    ('Uso de sistemas de acceso rápido', 23, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Siempre disponibles y accesibles para el equipo', 1, 23, 1),
+    ('Optimizo el espacio de almacenamiento', 2, 23, 1),
+    ('Uso de sistemas de acceso rápido', 3, 23, 1);
 
 -- Pregunta 24
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Manejo equipos y maquinaria de bodega', 24, 1),
-    ('Experiencia en operación de equipos de bodega', 24, 1),
-    ('Conozco el funcionamiento de maquinaria de bodega', 24, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Manejo equipos y maquinaria de bodega', 1, 24, 1),
+    ('Experiencia en operación de equipos de bodega', 2, 24, 1),
+    ('Conozco el funcionamiento de maquinaria de bodega', 3, 24, 1);
 
 -- Pregunta 25
-INSERT INTO RESPUESTAS (RESPUESTA, ID_PREGUNTA, ID_ESTADO) VALUES
-    ('Optimizo la recepción y despacho de productos', 25, 1),
-    ('Velocidad en la entrega de productos', 25, 1),
-    ('Sigo procedimientos precisos de recepción y despacho', 25, 1);
+INSERT INTO RESPUESTAS (RESPUESTA, VALOR, ID_PREGUNTA, ID_ESTADO) VALUES
+    ('Optimizo la recepción y despacho de productos', 1, 25, 1),
+    ('Velocidad en la entrega de productos', 2, 25, 1),
+    ('Sigo procedimientos precisos de recepción y despacho', 3, 25, 1);
 
 
 -- Postulación 1

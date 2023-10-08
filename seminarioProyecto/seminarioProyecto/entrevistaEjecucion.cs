@@ -16,6 +16,7 @@ namespace seminarioProyecto
         DataTable respuestasSeleccionadas = new DataTable();
         int indicePreguntaActual = 0;
         int idPreguntaActual;
+        int cantidadPreguntas;
         public entrevistaEjecucion()
         {
             InitializeComponent();
@@ -38,7 +39,14 @@ namespace seminarioProyecto
         public void obtenerPreguntas()
         {
             dtPreguntas = capaNegocias.entrevistaEjecucion.obtenerPreguntas();
+            cantidadPreguntas = dtPreguntas.Rows.Count;
         }
+
+        public void contarPreguntas()
+        {
+            lbNoPregunta.Text = "Pregunta " + (indicePreguntaActual + 1) + " de " + cantidadPreguntas;
+        }
+
 
         public void obtenerRespuestas(int idPre)
         {
@@ -65,19 +73,6 @@ namespace seminarioProyecto
             }
         }
 
-        //public void mostrarPregunta()
-        //{
-        //    if (indicePreguntaActual >= 0 && indicePreguntaActual < dtPreguntas.Rows.Count)
-        //    {        
-        //        string pregunta = dtPreguntas.Rows[indicePreguntaActual][1].ToString();
-        //        int idPregunta = Convert.ToInt32(dtPreguntas.Rows[indicePreguntaActual][0]);
-        //        idPreguntaActual = idPregunta;
-        //        lbPregunta.Text = pregunta;
-
-        //        obtenerRespuestas(idPregunta);
-        //    }
-        //}
-
         public void verificarEstadoPregunta()
         {
             DataRow[] fila = respuestasSeleccionadas.Select($"ID_Pregunta = {idPreguntaActual}");
@@ -100,22 +95,12 @@ namespace seminarioProyecto
             if (selectedRows.Length > 0)
             {
                 int idRespuestaSeleccionada = (int)selectedRows[0]["ID_Respuesta"];
-
-                // Debes implementar una función para establecer la respuesta seleccionada en el ComboBox
-                //EstablecerRespuestaSeleccionada(idRespuestaSeleccionada);
                 cbRespuestas.SelectedValue = idRespuestaSeleccionada;
-            }
-            //else
-            //{
-            //    // Si no se encuentra una respuesta seleccionada previamente, puedes establecer el ComboBox en su valor predeterminado.
-            //    cbRespuestas.SelectedIndex = -1; // O seleccionar la respuesta predeterminada.
-            //}
+            }            
         }
 
         public void agregarOmodificarRespuestaDt()
-        {
-            //int idPregunta = ObtenerIdPreguntaActual(); // Debes implementar esta función para obtener el ID de la pregunta actual.
-            //int idRespuesta = ObtenerIdRespuestaSeleccionada(); // Debes implementar esta función para obtener el ID de la respuesta seleccionada.
+        {           
 
             // Busca la fila correspondiente a la pregunta actual en el DataTable.
             DataRow[] selectedRows = respuestasSeleccionadas.Select($"ID_Pregunta = {idPreguntaActual}");
@@ -140,23 +125,30 @@ namespace seminarioProyecto
             DialogResult dialogResult = MessageBox.Show("La entrevista no se guardará hasta terminarla", "¿Realmente desea salir?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
-                //Mostramos los controles en la ventana
-                if (this.ParentForm is entrevista formularioPadre)
-                {
-                    formularioPadre.ControlBox = false;
-                    if (formularioPadre.ParentForm is menuAdmin formlarioPrincipal)
-                    {
-                        formlarioPrincipal.ControlBox = true;
-                    }
-                }
-
-                //Regresamos a la pantalla de entrevista
-                if (this.ParentForm is entrevista fp)
-                {
-                    fp.panelAlFondo();
-                }
-                this.Close();
+                regresarVentanaAnterior();
             }
+        }
+
+        public void regresarVentanaAnterior()
+        {
+            //Mostramos los controles en la ventana
+            if (this.ParentForm is entrevista formularioPadre)
+            {
+                formularioPadre.ControlBox = false;
+                if (formularioPadre.ParentForm is menuAdmin formlarioPrincipal)
+                {
+                    formlarioPrincipal.ControlBox = true;
+                }
+            }
+
+            //Regresamos a la pantalla de entrevista
+            if (this.ParentForm is entrevista fp)
+            {
+                fp.panelAlFondo();
+                fp.cargarPostulantes();
+                fp.deseleccionarDg();
+            }
+            this.Close();
         }
 
         private void entrevistaEjecucion_Load(object sender, EventArgs e)
@@ -174,6 +166,7 @@ namespace seminarioProyecto
             obtenerPreguntas();
             crearColDtRespuestasSeleccionadas();
             mostrarPregunta();
+            contarPreguntas();
         }
 
         public void verificarUltimaPregunta()
@@ -207,8 +200,9 @@ namespace seminarioProyecto
             }
             else
             {
-                MessageBox.Show("Entrevista guardada");
-                
+                //MessageBox.Show("Entrevista guardada");
+                //string a = "s";
+                guardarResultados();
             }
 
             if (indicePreguntaActual > 0)
@@ -219,6 +213,36 @@ namespace seminarioProyecto
             {
                 btnRegresarPreg.Visible =false;
             }
+            contarPreguntas();
+        }
+
+        public void guardarResultados()
+        {
+            int idPostulacion = capaNegocias.entrevistaEjecucion.idPostulacionEntrevista;
+            foreach (DataRow fila in respuestasSeleccionadas.Rows)
+            {
+                if (!capaNegocias.entrevistaEjecucion.guardarResultados(idPostulacion, Convert.ToInt32(fila[0]), Convert.ToInt32(fila[1])))
+                {
+                    //MessageBox.Show("Guardado: idPregunta: " + fila[0].ToString() + " idRespuesta: " + fila[1].ToString());                    
+                    MessageBox.Show("Resultado no guardado, intente de nuevo", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    regresarVentanaAnterior();
+                    return;
+                }
+            }
+
+            if (!capaNegocias.entrevistaEjecucion.editarEstadoPostulacion(idPostulacion))
+            {
+                //MessageBox.Show("Guardado: idPregunta: " + fila[0].ToString() + " idRespuesta: " + fila[1].ToString());                    
+                MessageBox.Show("Hubo un error en la postulación, intente de nuevo", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                regresarVentanaAnterior();
+                return;
+            }
+            else
+            {
+                MessageBox.Show("La entrevista se completó exitosamente", "Entrevista finalizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                regresarVentanaAnterior();
+            }
+
         }
 
         private void btnRegresarPreg_Click(object sender, EventArgs e)
@@ -241,6 +265,8 @@ namespace seminarioProyecto
             }
             verificarUltimaPregunta();
             mostrarRespuestaAnterior();
+            contarPreguntas();
+            btnSiguientePreg.Focus();
         }
     }
 }

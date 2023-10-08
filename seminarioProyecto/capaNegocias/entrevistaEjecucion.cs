@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using capaDatos;
+using MySql.Data.MySqlClient;
 
 namespace capaNegocias
 {
@@ -23,6 +24,26 @@ namespace capaNegocias
         {
             string cadena = "SELECT * FROM respuestas WHERE ID_PREGUNTA = "+idPregunta+" AND ID_ESTADO=1";
             return datos.GetDataTable(cadena);
+        }
+
+        public static bool guardarResultados(int idPostulacion, int idPregunta, int idRespuesta)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "INSERT INTO RESULTADOS (ID_POSTULACION, ID_PREGUNTA, ID_RESPUESTA, ID_ESTADO) " +
+            "VALUES(@idPostulacion, @idPregunta, @idRespuesta, 1);";
+            cmd.Parameters.AddWithValue("@idPostulacion", idPostulacion);
+            cmd.Parameters.AddWithValue("@idPregunta", idPregunta);
+            cmd.Parameters.AddWithValue("@idRespuesta", idRespuesta);
+            return datos.ExecTransactionParameters(cmd);
+        }
+
+        public static bool editarEstadoPostulacion(int idPostulacion)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "UPDATE POSTULACIONES SET ID_ESTADO_ENTREVISTA = 2 " +
+            "WHERE ID_POSTULACION = @idPostulacion;";
+            cmd.Parameters.AddWithValue("@idPostulacion", idPostulacion);
+            return datos.ExecTransactionParameters(cmd);
         }
     }
 }
