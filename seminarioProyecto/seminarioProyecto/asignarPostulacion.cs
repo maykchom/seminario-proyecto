@@ -27,6 +27,8 @@ namespace seminarioProyecto
         {
             DataTable dtPostu;
             dtPostu = capaNegocias.postulaciones.obtenerPostulaciones(Convert.ToInt32(cbPuestos.SelectedValue));
+            //MessageBox.Show(cbPuestos.SelectedValue.ToString());
+            string g = "s";
             dgvPost.DataSource = dtPostu;
             dgvPost.Columns[0].Visible = false;
             dgvPost.Columns[2].Visible = false;

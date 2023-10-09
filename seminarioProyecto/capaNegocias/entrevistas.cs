@@ -27,8 +27,7 @@ namespace capaNegocias
                 "INNER JOIN convocatorias AS C ON C.ID_CONVOCATORIA = P.ID_CONVOCATORIA " +
                 "INNER JOIN puestos AS PU ON PU.ID_PUESTO = C.ID_PUESTO " +
                 "INNER JOIN estados_entrevista AS EE ON EE.ID_ESTADO_ENTREVISTA = P.ID_ESTADO_ENTREVISTA " +
-                "WHERE PU.ID_PUESTO = "+idPuesto+" AND P.ID_ESTADO = 1 AND C.ID_ESTADO = 1 "+
-                "ORDER BY PP.APELLIDOS";
+                "WHERE PU.ID_PUESTO = "+idPuesto+" AND P.ID_ESTADO = 1 AND C.ID_ESTADO = 1 ";
             return datos.GetDataTable(cadena);
         }
 

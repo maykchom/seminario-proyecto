@@ -77,7 +77,8 @@ namespace seminarioProyecto
             DataTable dtConvo;
             dtConvo = capaNegocias.convocatorias.obtenerConvocatorias();
             dgvConvo.DataSource = dtConvo;
-
+            dgvConvo.Columns[0].Visible = false;
+            dgvConvo.Columns[1].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -111,7 +111,7 @@ namespace capaDatos
                             trx.Rollback();
                             resultado = false;
                             //"throw" se debe comentar en produccion porque sirve para ejecuar el codigo a pesar de que exista error
-                            //throw;
+                            throw;
                         }
                     }
                 }
@@ -120,7 +120,7 @@ namespace capaDatos
             catch (Exception)
             {
                 //"throw" se debe comentar en produccion porque sirve para ejecuar el codigo a pesar de que exista error
-                //throw;
+                throw;
             }
             return resultado;
         }

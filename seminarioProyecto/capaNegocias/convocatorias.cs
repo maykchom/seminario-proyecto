@@ -19,7 +19,7 @@ namespace capaNegocias
 
         public static DataTable obtenerConvocatorias()
         {
-            string strSQL = "SELECT C.ID_CONVOCATORIA, PU.ID_PUESTO, US.ID_USUARIO AS CREADOR, PU.TITULO AS PUESTO, C.FECHA_INICIO, C.FECHA_FIN, C.OBSERVACIONES " +
+            string strSQL = "SELECT C.ID_CONVOCATORIA, PU.ID_PUESTO, US.ID_USUARIO AS CREADOR, PU.TITULO AS PUESTO, C.FECHA_INICIO AS INICIO, C.FECHA_FIN AS FIN, C.OBSERVACIONES " +
                             "FROM CONVOCATORIAS AS C "+
                             "INNER JOIN PUESTOS AS PU ON PU.ID_PUESTO = C.ID_PUESTO "+
                             "INNER JOIN USUARIOS AS US ON US.ID_USUARIO = C.ID_USUARIO "+

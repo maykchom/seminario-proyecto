@@ -46,10 +46,10 @@ INSERT INTO POSTULANTES (NOMBRES, APELLIDOS, FECHA_NACIMIENTO, DIRECCION, TELEFO
 
 -- Convocatoria 1
 INSERT INTO CONVOCATORIAS (FECHA_INICIO, FECHA_FIN, OBSERVACIONES, ID_PUESTO, ID_USUARIO, ID_ESTADO) VALUES
-    ('2023-09-01', '2023-09-15', 'Convocatoria para puesto de Vendedor', 1, 'usuario1', 1);
+    ('2023-09-01', '2023-11-15', 'Convocatoria para puesto de Vendedor', 1, 'usuario1', 1);
 -- Convocatoria 2
 INSERT INTO CONVOCATORIAS (FECHA_INICIO, FECHA_FIN, OBSERVACIONES, ID_PUESTO, ID_USUARIO, ID_ESTADO) VALUES
-    ('2023-08-15', '2023-08-30', 'Convocatoria para puesto de Encargado de Bodega', 3, 'usuario2', 1);
+    ('2023-08-15', '2023-11-30', 'Convocatoria para puesto de Encargado de Bodega', 3, 'usuario2', 1);
 
 
 -- Preguntas para el puesto de "Vendedor"

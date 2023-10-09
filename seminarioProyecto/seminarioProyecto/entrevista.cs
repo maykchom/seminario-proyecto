@@ -52,11 +52,11 @@ namespace seminarioProyecto
             DataTable dtPostu;
             dtPostu = capaNegocias.entrevistas.obtenerPostulantes(Convert.ToInt32(cbPuestos.SelectedValue));
             dgvPost.DataSource = dtPostu;
-            //dgvPost.Columns[0].Visible = false;
-            //dgvPost.Columns[3].Visible = false;
-            //dgvPost.Columns[6].Visible = false;
-            //dgvPost.Columns[8].Visible = false;
-            //dgvPost.Columns[10].Visible = false;
+            dgvPost.Columns[0].Visible = false;
+            dgvPost.Columns[3].Visible = false;
+            dgvPost.Columns[6].Visible = false;
+            dgvPost.Columns[8].Visible = false;
+            dgvPost.Columns[10].Visible = false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
