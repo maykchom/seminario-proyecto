@@ -50,3 +50,4 @@ C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioPro
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.asignarPostulacion.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.entrevista.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.entrevistaEjecucion.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.confPreguntas.resources

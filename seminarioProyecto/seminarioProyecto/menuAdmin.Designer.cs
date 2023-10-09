@@ -46,7 +46,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1016, 669);
+            this.pictureBox1.Size = new System.Drawing.Size(1014, 667);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -61,7 +61,7 @@
             this.btCrearConvo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btCrearConvo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCrearConvo.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.btCrearConvo.Location = new System.Drawing.Point(312, 203);
+            this.btCrearConvo.Location = new System.Drawing.Point(311, 202);
             this.btCrearConvo.Margin = new System.Windows.Forms.Padding(0);
             this.btCrearConvo.Name = "btCrearConvo";
             this.btCrearConvo.Size = new System.Drawing.Size(86, 21);
@@ -83,7 +83,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button2.Location = new System.Drawing.Point(822, 203);
+            this.button2.Location = new System.Drawing.Point(820, 202);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 21);
             this.button2.TabIndex = 1;
@@ -104,7 +104,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button3.Location = new System.Drawing.Point(312, 366);
+            this.button3.Location = new System.Drawing.Point(311, 365);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(86, 21);
             this.button3.TabIndex = 1;
@@ -125,7 +125,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button4.Location = new System.Drawing.Point(822, 366);
+            this.button4.Location = new System.Drawing.Point(820, 365);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(86, 21);
             this.button4.TabIndex = 1;
@@ -147,7 +147,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1016, 669);
+            this.panel1.Size = new System.Drawing.Size(1014, 667);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -160,19 +160,20 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button1.Location = new System.Drawing.Point(312, 530);
+            this.button1.Location = new System.Drawing.Point(311, 529);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 21);
             this.button1.TabIndex = 2;
             this.button1.Text = "Entrar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 669);
+            this.ClientSize = new System.Drawing.Size(1014, 667);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;

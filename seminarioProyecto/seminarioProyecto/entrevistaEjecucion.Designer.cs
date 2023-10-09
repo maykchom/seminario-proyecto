@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(entrevistaEjecucion));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbNoPregunta = new System.Windows.Forms.Label();
             this.lbEstadoPregunta = new System.Windows.Forms.Label();
             this.btnRegresarPreg = new System.Windows.Forms.Button();
             this.btnSiguientePreg = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.lbPregunta = new System.Windows.Forms.Label();
             this.btCancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbNoPregunta = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1016, 669);
             this.panel1.TabIndex = 0;
+            // 
+            // lbNoPregunta
+            // 
+            this.lbNoPregunta.BackColor = System.Drawing.SystemColors.Control;
+            this.lbNoPregunta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNoPregunta.Location = new System.Drawing.Point(361, 114);
+            this.lbNoPregunta.Name = "lbNoPregunta";
+            this.lbNoPregunta.Size = new System.Drawing.Size(272, 26);
+            this.lbNoPregunta.TabIndex = 20;
+            this.lbNoPregunta.Text = "label1";
+            this.lbNoPregunta.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbEstadoPregunta
             // 
@@ -157,17 +168,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lbNoPregunta
-            // 
-            this.lbNoPregunta.AutoSize = true;
-            this.lbNoPregunta.BackColor = System.Drawing.Color.White;
-            this.lbNoPregunta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNoPregunta.Location = new System.Drawing.Point(873, 643);
-            this.lbNoPregunta.Name = "lbNoPregunta";
-            this.lbNoPregunta.Size = new System.Drawing.Size(45, 17);
-            this.lbNoPregunta.TabIndex = 20;
-            this.lbNoPregunta.Text = "label1";
-            // 
             // entrevistaEjecucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,7 +178,6 @@
             this.Text = "entrevistaEjecucion";
             this.Load += new System.EventHandler(this.entrevistaEjecucion_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
