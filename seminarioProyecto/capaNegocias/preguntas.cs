@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using capaDatos;
+using MySql.Data.MySqlClient;
 
 namespace capaNegocias
 {
@@ -31,6 +32,35 @@ namespace capaNegocias
                 "WHERE ID_PREGUNTA = "+idPregunta+" AND ID_ESTADO = 1 " +
                 "ORDER BY VALOR DESC;";
             return datos.GetDataTable(cadena);
+        }
+
+        public static bool crearPregunta(string pregunta, int idPuesto)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "INSERT INTO PREGUNTAS (PREGUNTA, ID_PUESTO, ID_ESTADO) VALUES(@pregunta, @idPuesto, 1)";
+            cmd.Parameters.AddWithValue("@pregunta", pregunta);
+            cmd.Parameters.AddWithValue("@idPuesto", idPuesto);
+
+            return datos.ExecTransactionParameters(cmd);
+        }
+
+        public static bool editarPregunta(string pregunta, int idPregunta)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "UPDATE PREGUNTAS SET PREGUNTA = @pregunta WHERE ID_PREGUNTA = @idPregunta";
+            cmd.Parameters.AddWithValue("@pregunta", pregunta);
+            cmd.Parameters.AddWithValue("@idPregunta", idPregunta);
+
+            return datos.ExecTransactionParameters(cmd);
+        }
+
+        public static bool eliminarPregunta(int idPregunta)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "UPDATE PREGUNTAS SET ID_ESTADO = 2 WHERE ID_PREGUNTA = @idPregunta";            
+            cmd.Parameters.AddWithValue("@idPregunta", idPregunta);
+
+            return datos.ExecTransactionParameters(cmd);
         }
     }
 }

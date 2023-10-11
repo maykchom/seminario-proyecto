@@ -1,0 +1,5 @@
+Verificar al momento de hacer la entrevista que el puesto tenga preguntas, de lo contrario no dejar entrar
+
+Agregar un campo a la tabla de postulaciones del puntaje obtenido en la entrevista para no interferir en el resultado si se realizan modificaciones en las respuestas
+
+Verificar al momento de hacer la entrevista que las preguntas del puesto tengan todas respuestas
