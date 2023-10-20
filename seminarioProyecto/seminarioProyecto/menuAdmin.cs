@@ -125,5 +125,22 @@ namespace seminarioProyecto
             abrirFormularioHijo(new confPreguntas());
             panel1.BringToFront();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new resultados());
+            panel1.BringToFront();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = DateTime.Now.ToString("hh:mm tt");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new puestos());
+            panel1.BringToFront();
+        }
     }
 }

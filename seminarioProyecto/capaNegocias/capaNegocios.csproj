@@ -100,7 +100,9 @@
     <Compile Include="postulaciones.cs" />
     <Compile Include="postulantes.cs" />
     <Compile Include="preguntas.cs" />
+    <Compile Include="puestos.cs" />
     <Compile Include="respuestas.cs" />
+    <Compile Include="resultados.cs" />
     <Compile Include="sesion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

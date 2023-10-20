@@ -92,6 +92,7 @@ namespace seminarioProyecto
             if (idEstado != 1)
             {
                 MessageBox.Show("La entrevista ya fué realizada", "Completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvPost.ClearSelection();
                 return;
             }
 

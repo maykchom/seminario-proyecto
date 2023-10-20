@@ -60,9 +60,9 @@
             // 
             // lbNoPregunta
             // 
-            this.lbNoPregunta.BackColor = System.Drawing.SystemColors.Control;
+            this.lbNoPregunta.BackColor = System.Drawing.Color.White;
             this.lbNoPregunta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNoPregunta.Location = new System.Drawing.Point(361, 114);
+            this.lbNoPregunta.Location = new System.Drawing.Point(363, 85);
             this.lbNoPregunta.Name = "lbNoPregunta";
             this.lbNoPregunta.Size = new System.Drawing.Size(272, 26);
             this.lbNoPregunta.TabIndex = 20;
@@ -71,9 +71,10 @@
             // 
             // lbEstadoPregunta
             // 
+            this.lbEstadoPregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.lbEstadoPregunta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstadoPregunta.ForeColor = System.Drawing.Color.Gray;
-            this.lbEstadoPregunta.Location = new System.Drawing.Point(388, 391);
+            this.lbEstadoPregunta.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbEstadoPregunta.Location = new System.Drawing.Point(386, 414);
             this.lbEstadoPregunta.Name = "lbEstadoPregunta";
             this.lbEstadoPregunta.Size = new System.Drawing.Size(215, 23);
             this.lbEstadoPregunta.TabIndex = 19;
@@ -120,19 +121,22 @@
             // 
             // cbRespuestas
             // 
+            this.cbRespuestas.BackColor = System.Drawing.Color.Gainsboro;
             this.cbRespuestas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRespuestas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbRespuestas.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRespuestas.FormattingEnabled = true;
-            this.cbRespuestas.Location = new System.Drawing.Point(102, 364);
+            this.cbRespuestas.Location = new System.Drawing.Point(100, 387);
             this.cbRespuestas.Name = "cbRespuestas";
             this.cbRespuestas.Size = new System.Drawing.Size(818, 24);
             this.cbRespuestas.TabIndex = 5;
             // 
             // lbPregunta
             // 
+            this.lbPregunta.BackColor = System.Drawing.Color.White;
             this.lbPregunta.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPregunta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbPregunta.Location = new System.Drawing.Point(95, 84);
+            this.lbPregunta.Location = new System.Drawing.Point(95, 101);
             this.lbPregunta.Name = "lbPregunta";
             this.lbPregunta.Size = new System.Drawing.Size(825, 222);
             this.lbPregunta.TabIndex = 4;

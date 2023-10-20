@@ -29,14 +29,14 @@ namespace capaNegocias
         //    return datos.GetDataTable(strSQL);
         //}
 
-        public static DataTable obtenerPostulaciones(int idPuesto)
+        public static DataTable obtenerPostulaciones(int idConvocatoria)
         {
             string strSQL = "SELECT POST.*, PUES.ID_PUESTO, PUES.TITULO AS PUESTO, CONCAT(POSTU.NOMBRES,' ',POSTU.APELLIDOS) AS POSTULANTE " +
             "FROM postulaciones AS POST " +
             "INNER JOIN convocatorias AS C ON C.ID_CONVOCATORIA = POST.ID_CONVOCATORIA " +
             "INNER JOIN puestos AS PUES ON PUES.ID_PUESTO = C.ID_PUESTO " +
             "INNER JOIN postulantes AS POSTU ON POSTU.ID_POSTULANTE = POST.ID_POSTULANTE " +
-            "WHERE C.ID_PUESTO = " + idPuesto + " AND POST.ID_ESTADO = 1 ";
+            "WHERE C.ID_CONVOCATORIA = "+idConvocatoria+"  AND POST.ID_ESTADO = 1 ";
             return datos.GetDataTable(strSQL);
         }
 

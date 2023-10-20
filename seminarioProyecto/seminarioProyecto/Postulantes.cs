@@ -52,7 +52,6 @@ namespace seminarioProyecto
 
         private void dgvPost_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            gbPostulantes.Text = "Editar convocatoria";
             btNuevo.Visible = true;
             btnGuardar.Visible = false;
             btnEditar.Visible = true;            
@@ -73,7 +72,6 @@ namespace seminarioProyecto
 
         public void limpiarCampos()
         {
-            gbPostulantes.Text = "Nuevo postulante";
             btNuevo.Visible = false;
             btnGuardar.Visible = true;
             btnEditar.Visible = false;

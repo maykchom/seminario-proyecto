@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetAfiche" targetNamespace="http://tempuri.org/DataSetAfiche.xsd" xmlns:mstns="http://tempuri.org/DataSetAfiche.xsd" xmlns="http://tempuri.org/DataSetAfiche.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetAfiche" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetAfiche" msprop:Generator_DataSetName="DataSetAfiche">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="datosAfiche" msprop:Generator_RowEvHandlerName="datosAficheRowChangeEventHandler" msprop:Generator_RowDeletedName="datosAficheRowDeleted" msprop:Generator_RowDeletingName="datosAficheRowDeleting" msprop:Generator_RowEvArgName="datosAficheRowChangeEvent" msprop:Generator_TablePropName="datosAfiche" msprop:Generator_RowChangedName="datosAficheRowChanged" msprop:Generator_RowChangingName="datosAficheRowChanging" msprop:Generator_TableClassName="datosAficheDataTable" msprop:Generator_RowClassName="datosAficheRow" msprop:Generator_TableVarName="tabledatosAfiche" msprop:Generator_UserTableName="datosAfiche">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_CONVOCATORIA" msprop:Generator_ColumnPropNameInRow="ID_CONVOCATORIA" msprop:Generator_ColumnPropNameInTable="ID_CONVOCATORIAColumn" msprop:Generator_ColumnVarNameInTable="columnID_CONVOCATORIA" msprop:Generator_UserColumnName="ID_CONVOCATORIA" type="xs:string" minOccurs="0" />
+              <xs:element name="INICIO" msprop:Generator_ColumnPropNameInRow="INICIO" msprop:Generator_ColumnPropNameInTable="INICIOColumn" msprop:Generator_ColumnVarNameInTable="columnINICIO" msprop:Generator_UserColumnName="INICIO" type="xs:string" minOccurs="0" />
+              <xs:element name="FIN" msprop:Generator_ColumnPropNameInRow="FIN" msprop:Generator_ColumnPropNameInTable="FINColumn" msprop:Generator_ColumnVarNameInTable="columnFIN" msprop:Generator_UserColumnName="FIN" type="xs:string" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_UserColumnName="OBSERVACIONES" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_PUESTO" msprop:Generator_ColumnPropNameInRow="ID_PUESTO" msprop:Generator_ColumnPropNameInTable="ID_PUESTOColumn" msprop:Generator_ColumnVarNameInTable="columnID_PUESTO" msprop:Generator_UserColumnName="ID_PUESTO" type="xs:string" minOccurs="0" />
+              <xs:element name="TITULO" msprop:Generator_ColumnPropNameInRow="TITULO" msprop:Generator_ColumnPropNameInTable="TITULOColumn" msprop:Generator_ColumnVarNameInTable="columnTITULO" msprop:Generator_UserColumnName="TITULO" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" type="xs:string" minOccurs="0" />
+              <xs:element name="PERFIL" msprop:Generator_ColumnPropNameInRow="PERFIL" msprop:Generator_ColumnPropNameInTable="PERFILColumn" msprop:Generator_ColumnVarNameInTable="columnPERFIL" msprop:Generator_UserColumnName="PERFIL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

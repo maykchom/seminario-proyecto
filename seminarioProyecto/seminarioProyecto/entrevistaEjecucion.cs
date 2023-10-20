@@ -203,6 +203,9 @@ namespace seminarioProyecto
                 //MessageBox.Show("Entrevista guardada");
                 //string a = "s";
                 guardarResultados();
+                guardarResultadoObtenido();
+                guardarValorEntrevista();
+
             }
 
             if (indicePreguntaActual > 0)
@@ -214,6 +217,37 @@ namespace seminarioProyecto
                 btnRegresarPreg.Visible =false;
             }
             contarPreguntas();
+        }
+
+        public void guardarResultadoObtenido()
+        {
+            DataTable resultado;
+            int resultadoObtenido = 0;
+            resultado = capaNegocias.entrevistaEjecucion.resultadoObtenido();
+            if (resultado.Rows.Count > 0)
+            {
+                resultadoObtenido = Convert.ToInt32(resultado.Rows[0][0]);
+                if (!capaNegocias.entrevistaEjecucion.guardarResultadoObtenido(resultadoObtenido))
+                {                    
+                    MessageBox.Show("Resultado no guardado, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        public void guardarValorEntrevista()
+        {
+            DataTable resultado;
+            int valorEntrevista = 0;
+            resultado = capaNegocias.entrevistaEjecucion.valorEntrevista();
+            if (resultado.Rows.Count > 0)
+            {
+                valorEntrevista = Convert.ToInt32(resultado.Rows[0][0]);
+                if (!capaNegocias.entrevistaEjecucion.guardarValorEntrevista(valorEntrevista))
+                {
+                    MessageBox.Show("Resultado no guardado, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void guardarResultados()

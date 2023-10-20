@@ -72,7 +72,10 @@ namespace seminarioProyecto
             DataTable dtPreguntas;
             dtPreguntas = capaNegocias.preguntas.obtenerPreguntas(Convert.ToInt32(cbPuestos.SelectedValue));
             dgvPreg.DataSource = dtPreguntas;
-            //dgvPreg.Columns[0].Visible = false;
+            dgvPreg.Columns[0].Visible = false;
+            dgvPreg.Columns[1].Visible = false;
+            dgvPreg.ClearSelection();
+            limpiarControles();
         }
 
         //public void cargarRespuestas()
@@ -173,6 +176,11 @@ namespace seminarioProyecto
             capaNegocias.respuestas.idPregunta = idPregunta;
             abrirFormularioHijo(new respuestas());
             panel1.BringToFront();
+        }
+
+        private void confPreguntas_Load(object sender, EventArgs e)
+        {
+            limpiarControles();
         }
     }
 }

@@ -45,5 +45,43 @@ namespace capaNegocias
             cmd.Parameters.AddWithValue("@idPostulacion", idPostulacion);
             return datos.ExecTransactionParameters(cmd);
         }
+
+        public static DataTable resultadoObtenido()
+        {
+            string cadena = "SELECT SUM(RESS.VALOR) AS TOTAL_OBTENIDO " +
+                "FROM postulaciones AS POS " +
+                "INNER JOIN resultados AS RES ON RES.ID_POSTULACION = POS.ID_POSTULACION " +
+                "INNER JOIN respuestas AS RESS ON RESS.ID_RESPUESTA = RES.ID_RESPUESTA " +
+                "WHERE POS.ID_ESTADO= 1 AND RESS.ID_ESTADO = 1 AND POS.ID_POSTULACION = "+idPostulacionEntrevista;
+            return datos.GetDataTable(cadena);
+        }
+
+        public static DataTable valorEntrevista()
+        {
+            string cadena = "SELECT COUNT(RE.ID_RESPUESTA) AS TOTAL_ENTREVISTA " +
+                "FROM puestos AS PU " +
+                "INNER JOIN preguntas AS PR ON PR.ID_PUESTO = PU.ID_PUESTO " +
+                "INNER JOIN respuestas AS RE ON RE.ID_PREGUNTA = PR.ID_PREGUNTA " +
+                "WHERE RE.ID_ESTADO = 1 AND PR.ID_ESTADO = 1 AND PU.ID_ESTADO = 1 AND PU.ID_PUESTO = "+idPuestoEntrevista;
+            return datos.GetDataTable(cadena);
+        }
+
+        public static bool guardarResultadoObtenido(int resultadoObtenido)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "UPDATE POSTULACIONES SET VALOR_ENTREVISTA_OBTENIDO = " + resultadoObtenido + " "+
+            "WHERE ID_POSTULACION = @idPostulacion;";
+            cmd.Parameters.AddWithValue("@idPostulacion", idPostulacionEntrevista);
+            return datos.ExecTransactionParameters(cmd);
+        }
+
+        public static bool guardarValorEntrevista(int valorEntrevista)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "UPDATE POSTULACIONES SET VALOR_ENTREVISTA = " + valorEntrevista + " " +
+            "WHERE ID_POSTULACION = @idPostulacion;";
+            cmd.Parameters.AddWithValue("@idPostulacion", idPostulacionEntrevista);
+            return datos.ExecTransactionParameters(cmd);
+        }
     }
 }

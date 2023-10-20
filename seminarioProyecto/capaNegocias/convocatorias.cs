@@ -60,5 +60,15 @@ namespace capaNegocias
             cmd.Parameters.AddWithValue("@id_convo", idConvocatoria);
             return datos.ExecTransactionParameters(cmd);
         }
+
+        public static DataTable cargarDatosAfiche(string idConvocatoria)
+        {
+            string cadena = "SELECT C.ID_CONVOCATORIA, DATE_FORMAT(C.FECHA_INICIO, '%d/%m/%Y') AS INICIO, DATE_FORMAT(C.FECHA_FIN, '%d/%m/%Y') AS FIN, OBSERVACIONES, P.ID_PUESTO, TITULO, DESCRIPCION, PERFIL " +
+                "FROM convocatorias AS C INNER JOIN puestos AS P ON P.ID_PUESTO = C.ID_PUESTO " +
+                "WHERE C.ID_CONVOCATORIA = "+idConvocatoria;
+            return datos.GetDataTable(cadena);
+        }
+
+
     }
 }

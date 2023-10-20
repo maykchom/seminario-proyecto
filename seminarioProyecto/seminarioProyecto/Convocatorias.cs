@@ -102,7 +102,6 @@ namespace seminarioProyecto
 
         private void dgvConvo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            gbAgregarConvo.Text = "Editar convocatoria";
             btNuevo.Visible = true;
             btnGuardar.Visible = false;
             btnEditar.Visible = true;
@@ -121,7 +120,7 @@ namespace seminarioProyecto
 
         public void limpiarCampos()
         {
-            gbAgregarConvo.Text = "Nueva convocatoria";
+
             btNuevo.Visible = false;
             btnGuardar.Visible = true;
             btnEditar.Visible = false;
@@ -175,6 +174,34 @@ namespace seminarioProyecto
                     MessageBox.Show("Convocatoria no eliminada, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void convocatorias_Load(object sender, EventArgs e)
+        {
+            limpiarCampos();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            DataTable dtDatos;
+            dtDatos = capaNegocias.convocatorias.cargarDatosAfiche(idConvo);
+            afiche.datos encabezado = new afiche.datos();
+            encabezado.ID_CONVOCATORIA = dtDatos.Rows[0][0].ToString();
+            encabezado.INICIO = dtDatos.Rows[0][1].ToString();
+            encabezado.FIN = dtDatos.Rows[0][2].ToString();
+            encabezado.OBSERVACIONES = dtDatos.Rows[0][3].ToString();
+            encabezado.ID_PUESTO = dtDatos.Rows[0][4].ToString();
+            encabezado.TITULO = dtDatos.Rows[0][5].ToString();
+            encabezado.DESCRIPCION = dtDatos.Rows[0][6].ToString();
+            encabezado.PERFIL = dtDatos.Rows[0][7].ToString();
+            //string a = "S";
+
+            afiche.aficheFormulario aficheAbrir = new afiche.aficheFormulario();
+            aficheAbrir.de.Add(encabezado);
+            aficheAbrir.ShowDialog();
+            dtDatos.Clear();
+            dtDatos.Columns.Clear();
+
         }
     }
 }

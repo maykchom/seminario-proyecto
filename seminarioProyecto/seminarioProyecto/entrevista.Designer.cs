@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(entrevista));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -61,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 61);
+            this.label1.Location = new System.Drawing.Point(47, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 17);
             this.label1.TabIndex = 18;
@@ -91,7 +93,7 @@
             this.btnRealizarEntrevista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRealizarEntrevista.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnRealizarEntrevista.ForeColor = System.Drawing.Color.Black;
-            this.btnRealizarEntrevista.Location = new System.Drawing.Point(416, 532);
+            this.btnRealizarEntrevista.Location = new System.Drawing.Point(415, 555);
             this.btnRealizarEntrevista.Name = "btnRealizarEntrevista";
             this.btnRealizarEntrevista.Size = new System.Drawing.Size(177, 30);
             this.btnRealizarEntrevista.TabIndex = 16;
@@ -105,29 +107,47 @@
             this.dgvPost.AllowUserToAddRows = false;
             this.dgvPost.AllowUserToDeleteRows = false;
             this.dgvPost.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPost.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvPost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvPost.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPost.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPost.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPost.Location = new System.Drawing.Point(25, 126);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPost.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPost.Location = new System.Drawing.Point(48, 124);
             this.dgvPost.Name = "dgvPost";
             this.dgvPost.ReadOnly = true;
             this.dgvPost.RowHeadersVisible = false;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvPost.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvPost.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPost.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPost.Size = new System.Drawing.Size(969, 352);
+            this.dgvPost.Size = new System.Drawing.Size(924, 375);
             this.dgvPost.TabIndex = 15;
             this.dgvPost.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPost_CellClick);
             // 
             // cbPuestos
             // 
+            this.cbPuestos.BackColor = System.Drawing.Color.Gainsboro;
             this.cbPuestos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPuestos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPuestos.FormattingEnabled = true;
-            this.cbPuestos.Location = new System.Drawing.Point(25, 81);
+            this.cbPuestos.Location = new System.Drawing.Point(50, 68);
             this.cbPuestos.Name = "cbPuestos";
-            this.cbPuestos.Size = new System.Drawing.Size(969, 24);
+            this.cbPuestos.Size = new System.Drawing.Size(924, 24);
             this.cbPuestos.TabIndex = 14;
             this.cbPuestos.SelectedIndexChanged += new System.EventHandler(this.cbPuestos_SelectedIndexChanged);
             // 

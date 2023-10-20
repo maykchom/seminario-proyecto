@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(convocatorias));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btCrearConvo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -36,22 +38,20 @@
             this.cbPuestoAgregar = new System.Windows.Forms.ComboBox();
             this.tbObser1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gbAgregarConvo = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btNuevo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpFI2 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpFI1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.dtpFI2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFI1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.dgvConvo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            this.gbAgregarConvo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConvo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,14 +90,15 @@
             this.btnGuardar.BackColor = System.Drawing.Color.Black;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(755, 102);
+            this.btnGuardar.Location = new System.Drawing.Point(757, 556);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(177, 30);
+            this.btnGuardar.Size = new System.Drawing.Size(177, 27);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar convocatoria";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -119,31 +120,42 @@
             // 
             // cbPuestoAgregar
             // 
-            this.cbPuestoAgregar.BackColor = System.Drawing.Color.LightGray;
+            this.cbPuestoAgregar.BackColor = System.Drawing.Color.Gainsboro;
             this.cbPuestoAgregar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPuestoAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPuestoAgregar.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.cbPuestoAgregar.FormattingEnabled = true;
-            this.cbPuestoAgregar.Location = new System.Drawing.Point(719, 43);
+            this.cbPuestoAgregar.Location = new System.Drawing.Point(706, 378);
             this.cbPuestoAgregar.Name = "cbPuestoAgregar";
-            this.cbPuestoAgregar.Size = new System.Drawing.Size(245, 24);
+            this.cbPuestoAgregar.Size = new System.Drawing.Size(228, 24);
             this.cbPuestoAgregar.TabIndex = 5;
             // 
             // tbObser1
             // 
-            this.tbObser1.BackColor = System.Drawing.Color.LightGray;
+            this.tbObser1.BackColor = System.Drawing.Color.Gainsboro;
             this.tbObser1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbObser1.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.tbObser1.Location = new System.Drawing.Point(17, 102);
+            this.tbObser1.Location = new System.Drawing.Point(76, 434);
             this.tbObser1.Multiline = true;
             this.tbObser1.Name = "tbObser1";
             this.tbObser1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbObser1.Size = new System.Drawing.Size(705, 118);
+            this.tbObser1.Size = new System.Drawing.Size(858, 108);
             this.tbObser1.TabIndex = 6;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.gbAgregarConvo);
+            this.panel1.Controls.Add(this.btnEditar);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btNuevo);
+            this.panel1.Controls.Add(this.cbPuestoAgregar);
+            this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.tbObser1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.dtpFI2);
+            this.panel1.Controls.Add(this.dtpFI1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnImprimir);
             this.panel1.Controls.Add(this.btCrearConvo);
             this.panel1.Controls.Add(this.dgvConvo);
@@ -154,41 +166,20 @@
             this.panel1.Size = new System.Drawing.Size(1016, 669);
             this.panel1.TabIndex = 8;
             // 
-            // gbAgregarConvo
-            // 
-            this.gbAgregarConvo.Controls.Add(this.btnEditar);
-            this.gbAgregarConvo.Controls.Add(this.btnEliminar);
-            this.gbAgregarConvo.Controls.Add(this.btNuevo);
-            this.gbAgregarConvo.Controls.Add(this.cbPuestoAgregar);
-            this.gbAgregarConvo.Controls.Add(this.btnGuardar);
-            this.gbAgregarConvo.Controls.Add(this.label1);
-            this.gbAgregarConvo.Controls.Add(this.label2);
-            this.gbAgregarConvo.Controls.Add(this.dtpFI2);
-            this.gbAgregarConvo.Controls.Add(this.label3);
-            this.gbAgregarConvo.Controls.Add(this.dtpFI1);
-            this.gbAgregarConvo.Controls.Add(this.tbObser1);
-            this.gbAgregarConvo.Controls.Add(this.label4);
-            this.gbAgregarConvo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAgregarConvo.Location = new System.Drawing.Point(24, 342);
-            this.gbAgregarConvo.Name = "gbAgregarConvo";
-            this.gbAgregarConvo.Size = new System.Drawing.Size(972, 237);
-            this.gbAgregarConvo.TabIndex = 12;
-            this.gbAgregarConvo.TabStop = false;
-            this.gbAgregarConvo.Text = "Agregar convocatoria";
-            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Black;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(755, 138);
+            this.btnEditar.Location = new System.Drawing.Point(572, 556);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(177, 30);
+            this.btnEditar.Size = new System.Drawing.Size(177, 27);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Guardar cambios";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -205,9 +196,9 @@
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.Location = new System.Drawing.Point(846, 174);
+            this.btnEliminar.Location = new System.Drawing.Point(387, 556);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(86, 30);
+            this.btnEliminar.Size = new System.Drawing.Size(86, 27);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -224,9 +215,9 @@
             this.btNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btNuevo.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btNuevo.Location = new System.Drawing.Point(755, 174);
+            this.btNuevo.Location = new System.Drawing.Point(479, 556);
             this.btNuevo.Name = "btNuevo";
-            this.btNuevo.Size = new System.Drawing.Size(86, 30);
+            this.btNuevo.Size = new System.Drawing.Size(86, 27);
             this.btNuevo.TabIndex = 2;
             this.btNuevo.Text = "Nuevo";
             this.btNuevo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -237,56 +228,62 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 23);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(73, 363);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 17);
+            this.label1.Size = new System.Drawing.Size(89, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Fecha de inicio";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(379, 23);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(408, 363);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 17);
+            this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Fecha de finalización";
-            // 
-            // dtpFI2
-            // 
-            this.dtpFI2.Location = new System.Drawing.Point(382, 44);
-            this.dtpFI2.Name = "dtpFI2";
-            this.dtpFI2.Size = new System.Drawing.Size(234, 21);
-            this.dtpFI2.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(716, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Puesto";
-            // 
-            // dtpFI1
-            // 
-            this.dtpFI1.Location = new System.Drawing.Point(17, 44);
-            this.dtpFI1.Name = "dtpFI1";
-            this.dtpFI1.Size = new System.Drawing.Size(231, 21);
-            this.dtpFI1.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 78);
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(73, 414);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 17);
+            this.label4.Size = new System.Drawing.Size(89, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Observaciones";
+            // 
+            // dtpFI2
+            // 
+            this.dtpFI2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFI2.Location = new System.Drawing.Point(411, 381);
+            this.dtpFI2.Name = "dtpFI2";
+            this.dtpFI2.Size = new System.Drawing.Size(234, 21);
+            this.dtpFI2.TabIndex = 10;
+            // 
+            // dtpFI1
+            // 
+            this.dtpFI1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFI1.Location = new System.Drawing.Point(73, 381);
+            this.dtpFI1.Name = "dtpFI1";
+            this.dtpFI1.Size = new System.Drawing.Size(231, 21);
+            this.dtpFI1.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(703, 361);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Puesto";
             // 
             // btnImprimir
             // 
@@ -305,21 +302,39 @@
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Visible = false;
-            this.btnImprimir.Click += new System.EventHandler(this.btCrearConvo_Click);
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // dgvConvo
             // 
             this.dgvConvo.AllowUserToAddRows = false;
             this.dgvConvo.AllowUserToDeleteRows = false;
             this.dgvConvo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvConvo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvConvo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvConvo.BackgroundColor = System.Drawing.Color.White;
+            this.dgvConvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConvo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConvo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConvo.Location = new System.Drawing.Point(24, 65);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConvo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvConvo.Location = new System.Drawing.Point(42, 72);
             this.dgvConvo.Name = "dgvConvo";
+            this.dgvConvo.ReadOnly = true;
             this.dgvConvo.RowHeadersVisible = false;
             this.dgvConvo.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConvo.Size = new System.Drawing.Size(969, 271);
+            this.dgvConvo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvConvo.Size = new System.Drawing.Size(936, 249);
             this.dgvConvo.TabIndex = 11;
             this.dgvConvo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConvo_CellClick);
             // 
@@ -333,11 +348,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "convocatorias";
             this.Text = "Convocatorias";
+            this.Load += new System.EventHandler(this.convocatorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.gbAgregarConvo.ResumeLayout(false);
-            this.gbAgregarConvo.PerformLayout();
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConvo)).EndInit();
             this.ResumeLayout(false);
 
@@ -358,7 +373,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpFI2;
         private System.Windows.Forms.DateTimePicker dtpFI1;
-        private System.Windows.Forms.GroupBox gbAgregarConvo;
         private System.Windows.Forms.DataGridView dgvConvo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnImprimir;

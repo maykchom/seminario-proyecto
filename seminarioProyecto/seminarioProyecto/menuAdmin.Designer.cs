@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuAdmin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btCrearConvo = new System.Windows.Forms.Button();
@@ -35,7 +36,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbHora = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,13 +65,13 @@
             this.btCrearConvo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btCrearConvo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btCrearConvo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCrearConvo.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.btCrearConvo.Location = new System.Drawing.Point(311, 202);
+            this.btCrearConvo.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btCrearConvo.Location = new System.Drawing.Point(328, 136);
             this.btCrearConvo.Margin = new System.Windows.Forms.Padding(0);
             this.btCrearConvo.Name = "btCrearConvo";
-            this.btCrearConvo.Size = new System.Drawing.Size(86, 21);
+            this.btCrearConvo.Size = new System.Drawing.Size(44, 33);
             this.btCrearConvo.TabIndex = 1;
-            this.btCrearConvo.Text = "Entrar";
+            this.btCrearConvo.Text = ">";
             this.btCrearConvo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btCrearConvo.UseVisualStyleBackColor = false;
             this.btCrearConvo.Click += new System.EventHandler(this.btCrearConvo_Click);
@@ -82,12 +87,12 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button2.Location = new System.Drawing.Point(820, 202);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.button2.Location = new System.Drawing.Point(839, 136);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 21);
+            this.button2.Size = new System.Drawing.Size(44, 33);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Entrar";
+            this.button2.Text = ">";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -103,12 +108,12 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button3.Location = new System.Drawing.Point(311, 365);
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.button3.Location = new System.Drawing.Point(328, 236);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 21);
+            this.button3.Size = new System.Drawing.Size(44, 33);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Entrar";
+            this.button3.Text = ">";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -124,12 +129,12 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button4.Location = new System.Drawing.Point(820, 365);
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.button4.Location = new System.Drawing.Point(839, 236);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 21);
+            this.button4.Size = new System.Drawing.Size(44, 33);
             this.button4.TabIndex = 1;
-            this.button4.Text = "Entrar";
+            this.button4.Text = ">";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -138,6 +143,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbHora);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
@@ -150,6 +158,37 @@
             this.panel1.Size = new System.Drawing.Size(1014, 667);
             this.panel1.TabIndex = 2;
             // 
+            // lbHora
+            // 
+            this.lbHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.lbHora.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.ForeColor = System.Drawing.Color.DimGray;
+            this.lbHora.Location = new System.Drawing.Point(850, 24);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(125, 23);
+            this.lbHora.TabIndex = 3;
+            this.lbHora.Text = "Cargando...";
+            this.lbHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.button5.Location = new System.Drawing.Point(328, 334);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(44, 33);
+            this.button5.TabIndex = 2;
+            this.button5.Text = ">";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -159,15 +198,40 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button1.Location = new System.Drawing.Point(311, 529);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.button1.Location = new System.Drawing.Point(839, 461);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 21);
+            this.button1.Size = new System.Drawing.Size(44, 33);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Entrar";
+            this.button1.Text = ">";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.button6.Location = new System.Drawing.Point(328, 462);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(44, 33);
+            this.button6.TabIndex = 2;
+            this.button6.Text = ">";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // menuAdmin
             // 
@@ -195,6 +259,10 @@
         private System.Windows.Forms.Button button4;
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbHora;
+        private System.Windows.Forms.Button button6;
     }
 }
 
