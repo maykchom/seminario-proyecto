@@ -29,6 +29,7 @@ namespace seminarioProyecto
 
                 if (Convert.ToInt32(datosSesion.Rows[0][10]) == 1)
                 {
+                    sesion.id_rol = (int)datosSesion.Rows[0][9];
                     //MessageBox.Show("Bienvenido/a " + sesion.Rows[0][1].ToString(), "Iniciando sesión como gerente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (Convert.ToInt32(datosSesion.Rows[0][9]) == 1)
                     {

@@ -11,7 +11,8 @@ namespace capaNegocias
 {
     public class sesion
     {
-        public static string id_usuario;      
+        public static string id_usuario;
+        public static int id_rol;
         public static DataTable iniciarSesion(string user, string pass)
         {
             string strSQL = "SELECT * FROM USUARIOS WHERE ID_USUARIO = '"+user+"' AND PASSWORD = '"+pass+"';";            

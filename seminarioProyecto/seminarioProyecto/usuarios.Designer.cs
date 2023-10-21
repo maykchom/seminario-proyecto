@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usuarios));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
@@ -59,7 +59,6 @@
             this.tbApellidos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -95,7 +94,6 @@
             this.panel1.Controls.Add(this.tbApellidos);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.tbNombre);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -110,32 +108,32 @@
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgvUsuarios.Location = new System.Drawing.Point(31, 79);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUsuarios.Location = new System.Drawing.Point(31, 70);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersVisible = false;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsuarios.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(952, 321);
+            this.dgvUsuarios.Size = new System.Drawing.Size(952, 344);
             this.dgvUsuarios.TabIndex = 28;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick_1);
             // 
@@ -340,60 +338,60 @@
             // tbContrasenia
             // 
             this.tbContrasenia.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbContrasenia.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbContrasenia.Location = new System.Drawing.Point(231, 531);
             this.tbContrasenia.MaxLength = 25;
             this.tbContrasenia.Name = "tbContrasenia";
             this.tbContrasenia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbContrasenia.Size = new System.Drawing.Size(152, 15);
+            this.tbContrasenia.Size = new System.Drawing.Size(152, 22);
             this.tbContrasenia.TabIndex = 6;
             this.tbContrasenia.UseSystemPasswordChar = true;
             // 
             // tbUsuario
             // 
             this.tbUsuario.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbUsuario.Enabled = false;
             this.tbUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsuario.Location = new System.Drawing.Point(31, 531);
             this.tbUsuario.MaxLength = 15;
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbUsuario.Size = new System.Drawing.Size(152, 15);
+            this.tbUsuario.Size = new System.Drawing.Size(152, 22);
             this.tbUsuario.TabIndex = 5;
             // 
             // tbCorreo
             // 
             this.tbCorreo.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCorreo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCorreo.Location = new System.Drawing.Point(831, 481);
             this.tbCorreo.Name = "tbCorreo";
             this.tbCorreo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbCorreo.Size = new System.Drawing.Size(152, 15);
+            this.tbCorreo.Size = new System.Drawing.Size(152, 22);
             this.tbCorreo.TabIndex = 4;
             // 
             // tbDireccion
             // 
             this.tbDireccion.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbDireccion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDireccion.Location = new System.Drawing.Point(631, 481);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbDireccion.Size = new System.Drawing.Size(152, 15);
+            this.tbDireccion.Size = new System.Drawing.Size(152, 22);
             this.tbDireccion.TabIndex = 3;
             // 
             // tbTelefono
             // 
             this.tbTelefono.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTelefono.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTelefono.Location = new System.Drawing.Point(431, 481);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbTelefono.Size = new System.Drawing.Size(152, 15);
+            this.tbTelefono.Size = new System.Drawing.Size(152, 22);
             this.tbTelefono.TabIndex = 2;
             // 
             // label1
@@ -409,12 +407,12 @@
             // tbApellidos
             // 
             this.tbApellidos.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbApellidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbApellidos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbApellidos.Location = new System.Drawing.Point(231, 481);
             this.tbApellidos.Name = "tbApellidos";
             this.tbApellidos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbApellidos.Size = new System.Drawing.Size(152, 15);
+            this.tbApellidos.Size = new System.Drawing.Size(152, 22);
             this.tbApellidos.TabIndex = 1;
             // 
             // label3
@@ -430,23 +428,13 @@
             // tbNombre
             // 
             this.tbNombre.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(31, 481);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbNombre.Size = new System.Drawing.Size(152, 15);
+            this.tbNombre.Size = new System.Drawing.Size(152, 22);
             this.tbNombre.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(390, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 25);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "USUARIOS";
             // 
             // pictureBox1
             // 
@@ -481,7 +469,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

@@ -179,6 +179,10 @@ namespace seminarioProyecto
         private void convocatorias_Load(object sender, EventArgs e)
         {
             limpiarCampos();
+            if (sesion.id_rol == 2)
+            {
+                panel2.Visible = true;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -200,7 +204,7 @@ namespace seminarioProyecto
             aficheAbrir.de.Add(encabezado);
             aficheAbrir.ShowDialog();
             dtDatos.Clear();
-            dtDatos.Columns.Clear();
+            //dtDatos.Columns.Clear();
 
         }
     }

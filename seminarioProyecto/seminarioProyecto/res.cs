@@ -123,5 +123,15 @@ namespace seminarioProyecto
             //dtResObt.Columns.Clear();
             string a = "s";
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (this.ParentForm is menuAdmin formularioPadre)
+            {
+                formularioPadre.panelAlFondo();
+            }
+
+            this.Close();
+        }
     }
 }

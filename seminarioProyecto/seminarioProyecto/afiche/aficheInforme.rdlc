@@ -11,6 +11,7 @@
               <TextRun>
                 <Value>Descripcion:</Value>
                 <Style>
+                  <FontFamily>century gothic</FontFamily>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -19,8 +20,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>0.15833cm</Top>
-        <Left>1.39912cm</Left>
+        <Top>1.11992cm</Top>
+        <Left>0.73969cm</Left>
         <Height>0.6cm</Height>
         <Width>3.26729cm</Width>
         <Style>
@@ -41,17 +42,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!DESCRIPCION.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontFamily>century gothic</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>DESCRIPCION</rd:DefaultName>
-        <Top>0.93472cm</Top>
-        <Left>1.45203cm</Left>
+        <Top>1.89631cm</Top>
+        <Left>0.7926cm</Left>
         <Height>2.37271cm</Height>
-        <Width>13.24208cm</Width>
+        <Width>14.33123cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -72,6 +75,7 @@
               <TextRun>
                 <Value>Perfil:</Value>
                 <Style>
+                  <FontFamily>century gothic</FontFamily>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -80,8 +84,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>3.62438cm</Top>
-        <Left>1.45203cm</Left>
+        <Top>4.58597cm</Top>
+        <Left>0.7926cm</Left>
         <Height>0.6cm</Height>
         <Width>3.26729cm</Width>
         <ZIndex>2</ZIndex>
@@ -103,17 +107,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!PERFIL.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontFamily>century gothic</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>PERFIL</rd:DefaultName>
-        <Top>4.33021cm</Top>
-        <Left>1.45203cm</Left>
+        <Top>5.2918cm</Top>
+        <Left>0.7926cm</Left>
         <Height>2.20486cm</Height>
-        <Width>13.18917cm</Width>
+        <Width>14.33123cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -134,6 +140,7 @@
               <TextRun>
                 <Value>Observaciones:</Value>
                 <Style>
+                  <FontFamily>century gothic</FontFamily>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -142,8 +149,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>6.84375cm</Top>
-        <Left>1.45203cm</Left>
+        <Top>7.80534cm</Top>
+        <Left>0.7926cm</Left>
         <Height>0.6cm</Height>
         <Width>3.26729cm</Width>
         <ZIndex>4</ZIndex>
@@ -165,17 +172,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!OBSERVACIONES.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontFamily>century gothic</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>OBSERVACIONES</rd:DefaultName>
-        <Top>7.62014cm</Top>
-        <Left>1.45203cm</Left>
+        <Top>8.58173cm</Top>
+        <Left>0.7926cm</Left>
         <Height>1.88722cm</Height>
-        <Width>13.18917cm</Width>
+        <Width>14.33123cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -187,14 +196,49 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="TITULO">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!TITULO.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TITULO</rd:DefaultName>
+        <Top>0.03528cm</Top>
+        <Left>0.73969cm</Left>
+        <Height>0.67938cm</Height>
+        <Width>14.38414cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.8125in</Height>
+    <Height>4.19792in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.19792in</Width>
   <Page>
     <PageHeader>
-      <Height>3.22474cm</Height>
+      <Height>3.36613cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -202,8 +246,8 @@
           <Source>Embedded</Source>
           <Value>serviLo</Value>
           <Sizing>Fit</Sizing>
-          <Top>0.60537cm</Top>
-          <Left>1.3462cm</Left>
+          <Top>0.55161cm</Top>
+          <Left>1.03792cm</Left>
           <Height>2.16958cm</Height>
           <Width>1.48167cm</Width>
           <Style>
@@ -212,29 +256,29 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox3">
+        <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Convocatoria abierta </Value>
+                  <Value>7 avenida, 1-20, zona 1, La Esperanza, Quetzaltenango</Value>
                   <Style>
-                    <FontSize>18pt</FontSize>
+                    <FontFamily>century gothic</FontFamily>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style>
-                <TextAlign>Center</TextAlign>
+                <TextAlign>Left</TextAlign>
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>0.28787cm</Top>
-          <Left>4.01849cm</Left>
-          <Height>0.70583cm</Height>
-          <Width>7.34188cm</Width>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>1.05376cm</Top>
+          <Left>3.19987cm</Left>
+          <Height>0.6cm</Height>
+          <Width>10.3164cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -246,25 +290,31 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox4">
+        <Textbox Name="Textbox5">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Al puesto de </Value>
-                  <Style />
+                  <Value>Servimateriales "Los Altos"</Value>
+                  <Style>
+                    <FontFamily>Century gothic</FontFamily>
+                    <FontSize>14pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>1.48759cm</Top>
-          <Left>6.1087cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Top>0.49785cm</Top>
+          <Left>4.63421cm</Left>
+          <Height>0.83813cm</Height>
+          <Width>7.44771cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -276,15 +326,51 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="TITULO">
+        <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!TITULO.Value, "DataSet1")</Value>
+                  <Value>Tels: 2440-1348, 2440-0666 &amp; 2207-5151</Value>
                   <Style>
+                    <FontFamily>century gothic</FontFamily>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>1.51237cm</Top>
+          <Left>3.61557cm</Left>
+          <Height>0.6cm</Height>
+          <Width>9.485cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox10">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Estamos contratando</Value>
+                  <Style>
+                    <FontFamily>century gothic</FontFamily>
+                    <FontSize>14pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -294,12 +380,12 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>TITULO</rd:DefaultName>
-          <Top>2.15814cm</Top>
-          <Left>4.30953cm</Left>
-          <Height>0.6cm</Height>
-          <Width>5.78083cm</Width>
-          <ZIndex>3</ZIndex>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>2.28876cm</Top>
+          <Left>3.31734cm</Left>
+          <Height>0.70583cm</Height>
+          <Width>10.08145cm</Width>
+          <ZIndex>4</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -318,7 +404,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>1.87854cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -329,18 +415,23 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Abierta hasta el</Value>
-                  <Style />
+                  <Value>Convocatoria abierta hasta el:</Value>
+                  <Style>
+                    <FontFamily>century gothic</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>0.89958cm</Top>
-          <Left>3.09245cm</Left>
+          <Top>0.14111cm</Top>
+          <Left>4.33599cm</Left>
           <Height>0.6cm</Height>
-          <Width>3.26729cm</Width>
+          <Width>5.62208cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -359,17 +450,21 @@
               <TextRuns>
                 <TextRun>
                   <Value>=First(Fields!FIN.Value, "DataSet1")</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>century gothic</FontFamily>
+                  </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>FIN</rd:DefaultName>
-          <Top>0.89958cm</Top>
-          <Left>6.77016cm</Left>
+          <Top>0.81167cm</Top>
+          <Left>3.31734cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>7.18312cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

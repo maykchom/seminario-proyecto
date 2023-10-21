@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -56,7 +55,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnNuevo);
@@ -77,21 +75,11 @@
             this.panel1.Size = new System.Drawing.Size(1016, 669);
             this.panel1.TabIndex = 0;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(425, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 25);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "PUESTOS";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 51);
+            this.label2.Location = new System.Drawing.Point(62, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 28;
@@ -193,7 +181,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(517, 403);
+            this.label4.Location = new System.Drawing.Point(517, 384);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 16);
             this.label4.TabIndex = 30;
@@ -203,7 +191,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 403);
+            this.label1.Location = new System.Drawing.Point(62, 384);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 16);
             this.label1.TabIndex = 30;
@@ -212,9 +200,9 @@
             // tbPerfilPuesto
             // 
             this.tbPerfilPuesto.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbPerfilPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPerfilPuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPerfilPuesto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPerfilPuesto.Location = new System.Drawing.Point(520, 422);
+            this.tbPerfilPuesto.Location = new System.Drawing.Point(520, 403);
             this.tbPerfilPuesto.Multiline = true;
             this.tbPerfilPuesto.Name = "tbPerfilPuesto";
             this.tbPerfilPuesto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -225,7 +213,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(62, 358);
+            this.label3.Location = new System.Drawing.Point(62, 339);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 30;
@@ -234,9 +222,9 @@
             // tbDescripcion
             // 
             this.tbDescripcion.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbDescripcion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDescripcion.Location = new System.Drawing.Point(65, 422);
+            this.tbDescripcion.Location = new System.Drawing.Point(65, 403);
             this.tbDescripcion.Multiline = true;
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -246,12 +234,12 @@
             // tbPuesto
             // 
             this.tbPuesto.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPuesto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPuesto.Location = new System.Drawing.Point(65, 377);
+            this.tbPuesto.Location = new System.Drawing.Point(65, 358);
             this.tbPuesto.Name = "tbPuesto";
             this.tbPuesto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbPuesto.Size = new System.Drawing.Size(890, 15);
+            this.tbPuesto.Size = new System.Drawing.Size(890, 22);
             this.tbPuesto.TabIndex = 0;
             // 
             // dgvPuestos
@@ -278,7 +266,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPuestos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPuestos.Location = new System.Drawing.Point(65, 71);
+            this.dgvPuestos.Location = new System.Drawing.Point(65, 61);
             this.dgvPuestos.Name = "dgvPuestos";
             this.dgvPuestos.ReadOnly = true;
             this.dgvPuestos.RowHeadersVisible = false;
@@ -286,7 +274,7 @@
             this.dgvPuestos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPuestos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPuestos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPuestos.Size = new System.Drawing.Size(890, 252);
+            this.dgvPuestos.Size = new System.Drawing.Size(890, 240);
             this.dgvPuestos.TabIndex = 27;
             this.dgvPuestos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuestos_CellClick);
             // 
@@ -335,6 +323,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbPerfilPuesto;
         private System.Windows.Forms.TextBox tbDescripcion;
-        private System.Windows.Forms.Label label5;
     }
 }
