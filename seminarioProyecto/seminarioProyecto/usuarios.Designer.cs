@@ -454,7 +454,7 @@
             this.ClientSize = new System.Drawing.Size(1016, 669);
             this.Controls.Add(this.panel1);
             this.Name = "usuarios";
-            this.Text = "usuarios";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.usuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

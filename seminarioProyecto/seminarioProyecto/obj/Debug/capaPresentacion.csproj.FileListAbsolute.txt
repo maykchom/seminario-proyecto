@@ -93,6 +93,7 @@ C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioPro
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.convocatorias.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.entrevista.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.entrevistaEjecucion.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.informe.informeFormulario.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.login.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.menuAdmin.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.historialConvocatorias.resources
@@ -100,6 +101,7 @@ C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioPro
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.postulantes.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.Properties.Resources.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.puestos.resources
+C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.res.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.respuestas.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.resultados.resources
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.usuarios.resources
@@ -108,5 +110,3 @@ C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioPro
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\capaPresentacion.csproj.CopyComplete
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.exe
 C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.pdb
-C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.informe.informeFormulario.resources
-C:\Users\Mike\Documents\GitHub\seminario-proyecto\seminarioProyecto\seminarioProyecto\obj\Debug\seminarioProyecto.res.resources

@@ -169,7 +169,7 @@
             this.ClientSize = new System.Drawing.Size(1016, 669);
             this.Controls.Add(this.panel1);
             this.Name = "entrevista";
-            this.Text = "entrevista";
+            this.Text = "Entrevista";
             this.Load += new System.EventHandler(this.entrevista_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

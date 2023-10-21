@@ -73,5 +73,22 @@ namespace seminarioProyecto
             abrirFormularioHijo(new res());
             panel1.BringToFront();
         }
+
+        private void pbSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login login = new login();
+            login.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = DateTime.Now.ToString("hh:mm tt");
+        }
+
+        private void menuSecre_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

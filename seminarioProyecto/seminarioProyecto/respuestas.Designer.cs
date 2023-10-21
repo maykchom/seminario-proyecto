@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(respuestas));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvRes = new System.Windows.Forms.DataGridView();
             this.btnGuardarRes = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tbRespuesta = new System.Windows.Forms.TextBox();
             this.btnEditarRes = new System.Windows.Forms.Button();
             this.btnEliminarRes = new System.Windows.Forms.Button();
-            this.dgvRes = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -62,6 +62,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1016, 669);
             this.panel1.TabIndex = 0;
+            // 
+            // dgvRes
+            // 
+            this.dgvRes.AllowUserToAddRows = false;
+            this.dgvRes.AllowUserToDeleteRows = false;
+            this.dgvRes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvRes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRes.Location = new System.Drawing.Point(68, 229);
+            this.dgvRes.Name = "dgvRes";
+            this.dgvRes.RowHeadersVisible = false;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvRes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvRes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRes.ShowCellErrors = false;
+            this.dgvRes.Size = new System.Drawing.Size(879, 295);
+            this.dgvRes.TabIndex = 20;
+            this.dgvRes.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvRes_CellBeginEdit);
+            this.dgvRes.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvRes_DataError);
             // 
             // btnGuardarRes
             // 
@@ -141,43 +178,6 @@
             this.btnEliminarRes.UseVisualStyleBackColor = false;
             this.btnEliminarRes.Visible = false;
             // 
-            // dgvRes
-            // 
-            this.dgvRes.AllowUserToAddRows = false;
-            this.dgvRes.AllowUserToDeleteRows = false;
-            this.dgvRes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRes.Location = new System.Drawing.Point(68, 229);
-            this.dgvRes.Name = "dgvRes";
-            this.dgvRes.RowHeadersVisible = false;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvRes.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvRes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRes.ShowCellErrors = false;
-            this.dgvRes.Size = new System.Drawing.Size(879, 295);
-            this.dgvRes.TabIndex = 20;
-            this.dgvRes.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvRes_CellBeginEdit);
-            this.dgvRes.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvRes_DataError);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
@@ -209,7 +209,7 @@
             this.ClientSize = new System.Drawing.Size(1016, 669);
             this.Controls.Add(this.panel1);
             this.Name = "respuestas";
-            this.Text = "respuestas";
+            this.Text = "Respuestas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).EndInit();

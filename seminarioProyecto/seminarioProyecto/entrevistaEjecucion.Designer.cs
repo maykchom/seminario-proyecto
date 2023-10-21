@@ -179,7 +179,7 @@
             this.ClientSize = new System.Drawing.Size(1016, 669);
             this.Controls.Add(this.panel1);
             this.Name = "entrevistaEjecucion";
-            this.Text = "entrevistaEjecucion";
+            this.Text = "Entrevista";
             this.Load += new System.EventHandler(this.entrevistaEjecucion_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

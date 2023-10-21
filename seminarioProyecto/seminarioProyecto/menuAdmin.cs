@@ -148,5 +148,17 @@ namespace seminarioProyecto
             abrirFormularioHijo(new usuarios());
             panel1.BringToFront();
         }
+
+        private void pbSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login login = new login();
+            login.ShowDialog();
+        }
+
+        private void menuAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

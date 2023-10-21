@@ -26,11 +26,11 @@ namespace capaNegocias
             return datos.GetDataTable(strSQL);
         }
 
-        public static bool crearPostulante(string nombre, string apellidos, DateTime fechaNacimiento, string direccion, string telefono, string correo, int idGenero)
+        public static bool crearPostulante(string nombre, string apellidos, DateTime fechaNacimiento, string direccion, string telefono, string correo, int idGenero, string cv)
         {
             MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "INSERT INTO POSTULANTES (NOMBRES, APELLIDOS, FECHA_NACIMIENTO, DIRECCION, TELEFONO, CORREO, ID_GENERO, ID_ESTADO) " +
-                "VALUES(@nombre, @apellidos, @fechaNac, @direccion, @telefono, @correo, @idGenero, 1);";
+            cmd.CommandText = "INSERT INTO POSTULANTES (NOMBRES, APELLIDOS, FECHA_NACIMIENTO, DIRECCION, TELEFONO, CORREO, ID_GENERO, ID_ESTADO, CV) " +
+                "VALUES(@nombre, @apellidos, @fechaNac, @direccion, @telefono, @correo, @idGenero, 1, @cv);";
             cmd.Parameters.AddWithValue("@nombre", nombre);
             cmd.Parameters.AddWithValue("@apellidos", apellidos);
             cmd.Parameters.AddWithValue("@fechaNac", fechaNacimiento);
@@ -38,16 +38,17 @@ namespace capaNegocias
             cmd.Parameters.AddWithValue("@telefono", telefono);
             cmd.Parameters.AddWithValue("@correo", correo);
             cmd.Parameters.AddWithValue("@idGenero", idGenero);
+            cmd.Parameters.AddWithValue("@cv", cv);
             return datos.ExecTransactionParameters(cmd);
         }
 
-        public static bool editarPostulante(string nombre, string apellidos, DateTime fechaNacimiento, string direccion, string telefono, string correo, int idGenero, int idPostu)
+        public static bool editarPostulante(string nombre, string apellidos, DateTime fechaNacimiento, string direccion, string telefono, string correo, int idGenero, int idPostu, string cv)
         {
             MySqlCommand cmd = new MySqlCommand();
             cmd.CommandText = "UPDATE POSTULANTES " +
                 "SET NOMBRES = @nombre, APELLIDOS = @apellidos, FECHA_NACIMIENTO = @fechaNac, " +
                 "DIRECCION = @direccion, TELEFONO = @telefono, CORREO = @correo, " +
-                "ID_GENERO = @idGenero WHERE ID_POSTULANTE = @idPostu;";
+                "ID_GENERO = @idGenero, CV = @cv WHERE ID_POSTULANTE = @idPostu;";
             cmd.Parameters.AddWithValue("@nombre", nombre);
             cmd.Parameters.AddWithValue("@apellidos", apellidos);
             cmd.Parameters.AddWithValue("@fechaNac", fechaNacimiento);
@@ -56,6 +57,7 @@ namespace capaNegocias
             cmd.Parameters.AddWithValue("@correo", correo);
             cmd.Parameters.AddWithValue("@idGenero", idGenero);
             cmd.Parameters.AddWithValue("@idPostu", idPostu);
+            cmd.Parameters.AddWithValue("@cv", cv);
             return datos.ExecTransactionParameters(cmd);
         }
 
