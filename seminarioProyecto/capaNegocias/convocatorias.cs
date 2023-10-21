@@ -13,7 +13,7 @@ namespace capaNegocias
     {
         public static DataTable cargarPuestos()
         {
-            string cadena = "SELECT * FROM PUESTOS;";
+            string cadena = "SELECT * FROM PUESTOS WHERE ID_ESTADO = 1;";
             return datos.GetDataTable(cadena);
         }
 

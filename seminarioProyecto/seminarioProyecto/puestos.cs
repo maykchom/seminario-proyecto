@@ -106,15 +106,19 @@ namespace seminarioProyecto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (capaNegocias.puestos.eliminarPuesto(idPuesto))
-            {
-                MessageBox.Show("Puesto eliminado exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cargarPuestos();
-                limpiarControles();
-            }
-            else
-            {
-                MessageBox.Show("No se pudo eliminar el puesto, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            DialogResult dialogResult = MessageBox.Show("¿Realmente quiere eliminar el puesto?", "Eliminar...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            { 
+                if (capaNegocias.puestos.eliminarPuesto(idPuesto))
+                {
+                    MessageBox.Show("Puesto eliminado exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarPuestos();
+                    limpiarControles();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el puesto, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

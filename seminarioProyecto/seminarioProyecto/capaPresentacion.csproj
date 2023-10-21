@@ -107,6 +107,21 @@
     <Compile Include="entrevistaEjecucion.Designer.cs">
       <DependentUpon>entrevistaEjecucion.cs</DependentUpon>
     </Compile>
+    <Compile Include="informe\DataSetInforme.cs">
+      <DependentUpon>DataSetInforme.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="informe\DataSetInforme.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetInforme.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="informe\datos.cs" />
+    <Compile Include="informe\informeFormulario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informe\informeFormulario.Designer.cs">
+      <DependentUpon>informeFormulario.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +160,12 @@
     <Compile Include="puestos.Designer.cs">
       <DependentUpon>puestos.cs</DependentUpon>
     </Compile>
+    <Compile Include="res.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="res.Designer.cs">
+      <DependentUpon>res.cs</DependentUpon>
+    </Compile>
     <Compile Include="respuestas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +179,12 @@
       <DependentUpon>resultados.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuarios.Designer.cs">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="afiche\aficheFormulario.resx">
       <DependentUpon>aficheFormulario.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +204,10 @@
     <EmbeddedResource Include="entrevistaEjecucion.resx">
       <DependentUpon>entrevistaEjecucion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="informe\informeFormulario.resx">
+      <DependentUpon>informeFormulario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informe\informeReporte.rdlc" />
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,11 +235,17 @@
     <EmbeddedResource Include="puestos.resx">
       <DependentUpon>puestos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="res.resx">
+      <DependentUpon>res.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="respuestas.resx">
       <DependentUpon>respuestas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="resultados.resx">
       <DependentUpon>resultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuarios.resx">
+      <DependentUpon>usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="afiche\DataSetAfiche.xsc">
       <DependentUpon>DataSetAfiche.xsd</DependentUpon>
@@ -221,7 +258,19 @@
     <None Include="afiche\DataSetAfiche.xss">
       <DependentUpon>DataSetAfiche.xsd</DependentUpon>
     </None>
+    <None Include="informe\DataSetInforme.xsc">
+      <DependentUpon>DataSetInforme.xsd</DependentUpon>
+    </None>
+    <None Include="informe\DataSetInforme.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetInforme.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="informe\DataSetInforme.xss">
+      <DependentUpon>DataSetInforme.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\seminarioProyecto.informe.datos.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

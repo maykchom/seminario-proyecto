@@ -128,7 +128,7 @@ namespace seminarioProyecto
 
         private void button5_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new resultados());
+            abrirFormularioHijo(new res());
             panel1.BringToFront();
         }
 
@@ -140,6 +140,12 @@ namespace seminarioProyecto
         private void button6_Click(object sender, EventArgs e)
         {
             abrirFormularioHijo(new puestos());
+            panel1.BringToFront();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new usuarios());
             panel1.BringToFront();
         }
     }
