@@ -40,12 +40,20 @@ namespace seminarioProyecto
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (this.ParentForm is menuAdmin formularioPadre)
+            if (valoresListos())
             {
-                formularioPadre.panelAlFondo();
+                if (this.ParentForm is menuAdmin formularioPadre)
+                {
+                    formularioPadre.panelAlFondo();
+                }
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Valores de las respuestas no repartidos correctamente o se repiten", "Revise...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            this.Close();
         }
 
 

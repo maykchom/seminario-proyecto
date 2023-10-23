@@ -15,6 +15,7 @@ namespace seminarioProyecto
     {
         bool convoVacias, postuVacios= false;
         int idPostulacion;
+        DateTime fechaFinal;
         public asignarPostulacion()
         {
             InitializeComponent();
@@ -107,9 +108,9 @@ namespace seminarioProyecto
             if (cbFechas.Items.Count == 0)
             {
                 cbFechas.Enabled = false;
-                cbFechas.DataSource = null;
-                cbFechas.Items.Add("No existen convocatorias");
-                cbFechas.SelectedIndex = 0;
+                //cbFechas.DataSource = null;
+                //cbFechas.Items.Add("No existen convocatorias");
+                //cbFechas.SelectedIndex = 0;
                 convoVacias = true;
             }
             else
@@ -147,6 +148,13 @@ namespace seminarioProyecto
                 MessageBox.Show("El postulante ya existe en esa convocatoria", "Revise...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (fechaFinal.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show("Las fechas de convocatoria ya finalizaron", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             crearPostulacion();
         }
 
@@ -203,6 +211,11 @@ namespace seminarioProyecto
         private void cbFechas_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarPostulantes();
+            DataTable dtFecha = new DataTable();
+            dtFecha = capaNegocias.postulaciones.obtenerFechaFin((int)cbFechas.SelectedValue);
+            fechaFinal = (DateTime)dtFecha.Rows[0][0];
+            //MessageBox.Show(fechaFinal.ToString());
+
         }
 
         private void cbPostulanteAE_SelectedIndexChanged(object sender, EventArgs e)

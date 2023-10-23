@@ -13,6 +13,7 @@ namespace seminarioProyecto
     public partial class menuAdmin : Form
     {
         private Form formularioHijoActual;
+        bool finalizarAplicacion = true;
         public menuAdmin()
         {
             InitializeComponent();
@@ -151,14 +152,25 @@ namespace seminarioProyecto
 
         private void pbSalir_Click(object sender, EventArgs e)
         {
+            finalizarAplicacion = false;
             this.Close();
             login login = new login();
             login.ShowDialog();
         }
 
         private void menuAdmin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
+        {            
+            if (finalizarAplicacion)
+            {
+                Application.Exit();
+            }
         }
+
+        private void menuAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

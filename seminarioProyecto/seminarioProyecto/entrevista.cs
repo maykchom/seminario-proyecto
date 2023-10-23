@@ -96,6 +96,15 @@ namespace seminarioProyecto
                 return;
             }
 
+            DataTable dtPreguntas;
+            dtPreguntas = capaNegocias.entrevistas.obtenerPreguntasDisponibles((int)cbPuestos.SelectedValue);
+            if (dtPreguntas.Rows.Count < 3)
+            {
+                MessageBox.Show("El puesto debe tener al menos 2 preguntas dispobibles", "Sin preguntas suficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             DateTime hoy = DateTime.Now; 
             if (hoy.Date >= fechaInicio.Date && hoy.Date <= fechaFin.Date )
             {

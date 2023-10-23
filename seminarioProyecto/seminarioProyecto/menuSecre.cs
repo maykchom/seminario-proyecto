@@ -14,6 +14,7 @@ namespace seminarioProyecto
     public partial class menuSecre : Form
     {
         private Form formularioHijoActual;
+        bool finalizarAplicacion = true;
         public menuSecre()
         {
             InitializeComponent();
@@ -76,6 +77,7 @@ namespace seminarioProyecto
 
         private void pbSalir_Click(object sender, EventArgs e)
         {
+            finalizarAplicacion = false;
             this.Close();
             login login = new login();
             login.ShowDialog();
@@ -88,7 +90,11 @@ namespace seminarioProyecto
 
         private void menuSecre_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (finalizarAplicacion)
+            {
+                Application.Exit();
+            }
+
         }
     }
 }

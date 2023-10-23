@@ -86,7 +86,25 @@ namespace seminarioProyecto
             DateTime fechaInicio = dtpFI1.Value;
             DateTime fechaFin = dtpFI2.Value;
             string obser = tbObser1.Text;
-            int idPuesto = Convert.ToInt32(cbPuestoAgregar.SelectedValue);            
+            int idPuesto = Convert.ToInt32(cbPuestoAgregar.SelectedValue);
+
+            if (fechaInicio.Date == fechaFin.Date)
+            {
+                MessageBox.Show("Las fechas no pueden ser iguales", "Fechas incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (fechaInicio.Date >= fechaFin.Date)
+            {
+                MessageBox.Show("La fecha de inicio debe ser menor a la fecha de finalización", "Fechas incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (fechaFin.Date <= DateTime.Now.Date)
+            {
+                MessageBox.Show("La fecha de finalización debe ser mayor a la de hoy", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (capaNegocias.convocatorias.crearConovocatoria(fechaInicio, fechaFin, obser, idPuesto, sesion.id_usuario))
             {
@@ -144,13 +162,32 @@ namespace seminarioProyecto
             DateTime fechaInicio = dtpFI1.Value;
             DateTime fechaFin = dtpFI2.Value;
             string obser = tbObser1.Text;
-            int idPuesto = Convert.ToInt32(cbPuestoAgregar.SelectedValue);            
+            int idPuesto = Convert.ToInt32(cbPuestoAgregar.SelectedValue);
+
+            if (fechaInicio.Date == fechaFin.Date)
+            {
+                MessageBox.Show("Las fechas no pueden ser iguales", "Fechas incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (fechaInicio.Date >= fechaFin.Date)
+            {
+                MessageBox.Show("La fecha de inicio debe ser menor a la fecha de finalización", "Fechas incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (fechaFin.Date <= DateTime.Now.Date)
+            {
+                MessageBox.Show("La fecha de finalización debe ser mayor a la de hoy", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
             if (capaNegocias.convocatorias.editarConvocatoria(fechaInicio, fechaFin, obser, idPuesto, idConvo))
             {
                 cargarConvocatorias();
                 limpiarCampos();
-                MessageBox.Show("Convocatoria editado exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Convocatoria editada exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

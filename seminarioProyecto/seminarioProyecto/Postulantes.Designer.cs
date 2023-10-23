@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(postulantes));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbCV = new System.Windows.Forms.Label();
+            this.btnCV = new System.Windows.Forms.Button();
             this.dtFechaNac = new System.Windows.Forms.DateTimePicker();
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -54,9 +56,7 @@
             this.dgvPost = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCV = new System.Windows.Forms.Button();
             this.ofd1 = new System.Windows.Forms.OpenFileDialog();
-            this.lbCV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -93,6 +93,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1016, 669);
             this.panel1.TabIndex = 0;
+            // 
+            // lbCV
+            // 
+            this.lbCV.AutoSize = true;
+            this.lbCV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbCV.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCV.Location = new System.Drawing.Point(760, 515);
+            this.lbCV.Name = "lbCV";
+            this.lbCV.Size = new System.Drawing.Size(55, 19);
+            this.lbCV.TabIndex = 14;
+            this.lbCV.Text = "Ver CV";
+            this.lbCV.Visible = false;
+            this.lbCV.Click += new System.EventHandler(this.lbCV_Click);
+            // 
+            // btnCV
+            // 
+            this.btnCV.BackColor = System.Drawing.Color.White;
+            this.btnCV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCV.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCV.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCV.Location = new System.Drawing.Point(697, 468);
+            this.btnCV.Name = "btnCV";
+            this.btnCV.Size = new System.Drawing.Size(190, 30);
+            this.btnCV.TabIndex = 13;
+            this.btnCV.Text = "Seleccionar CV...";
+            this.btnCV.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCV.UseVisualStyleBackColor = false;
+            this.btnCV.Click += new System.EventHandler(this.button1_Click);
             // 
             // dtFechaNac
             // 
@@ -178,9 +209,11 @@
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(67, 426);
+            this.tbNombre.MaxLength = 100;
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(150, 17);
             this.tbNombre.TabIndex = 0;
+            this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // btnGuardar
             // 
@@ -207,20 +240,22 @@
             this.tbApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbApellidos.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbApellidos.Location = new System.Drawing.Point(247, 426);
+            this.tbApellidos.MaxLength = 50;
             this.tbApellidos.Name = "tbApellidos";
             this.tbApellidos.Size = new System.Drawing.Size(150, 17);
             this.tbApellidos.TabIndex = 1;
+            this.tbApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidos_KeyPress);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(439, 451);
+            this.label7.Location = new System.Drawing.Point(439, 452);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 16);
+            this.label7.Size = new System.Drawing.Size(54, 16);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Género";
+            this.label7.Text = "Género*";
             // 
             // tbDireccion
             // 
@@ -228,6 +263,7 @@
             this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDireccion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDireccion.Location = new System.Drawing.Point(697, 426);
+            this.tbDireccion.MaxLength = 254;
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(190, 17);
             this.tbDireccion.TabIndex = 3;
@@ -239,9 +275,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(244, 458);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 16);
+            this.label6.Size = new System.Drawing.Size(49, 16);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Correo";
+            this.label6.Text = "Correo*";
             // 
             // tbTelefono
             // 
@@ -249,9 +285,11 @@
             this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTelefono.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTelefono.Location = new System.Drawing.Point(67, 478);
+            this.tbTelefono.MaxLength = 8;
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(150, 17);
             this.tbTelefono.TabIndex = 4;
+            this.tbTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTelefono_KeyPress);
             // 
             // label5
             // 
@@ -260,9 +298,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(64, 458);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 16);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Teléfono";
+            this.label5.Text = "Teléfono*";
             // 
             // tbCorreo
             // 
@@ -270,6 +308,7 @@
             this.tbCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCorreo.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCorreo.Location = new System.Drawing.Point(247, 478);
+            this.tbCorreo.MaxLength = 100;
             this.tbCorreo.Name = "tbCorreo";
             this.tbCorreo.Size = new System.Drawing.Size(150, 17);
             this.tbCorreo.TabIndex = 5;
@@ -281,9 +320,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(694, 406);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 16);
+            this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Dirección";
+            this.label4.Text = "Dirección*";
             // 
             // label1
             // 
@@ -292,9 +331,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(64, 406);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Nombres";
+            this.label1.Text = "Nombres*";
             // 
             // label3
             // 
@@ -303,9 +342,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(439, 406);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 16);
+            this.label3.Size = new System.Drawing.Size(114, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Fecha nacimiento";
+            this.label3.Text = "Fecha nacimiento *";
             // 
             // label2
             // 
@@ -314,9 +353,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(244, 406);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Apellidos";
+            this.label2.Text = "Apellidos*";
             // 
             // dgvPost
             // 
@@ -325,29 +364,29 @@
             this.dgvPost.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPost.BackgroundColor = System.Drawing.Color.White;
             this.dgvPost.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPost.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPost.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvPost.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPost.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPost.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvPost.Location = new System.Drawing.Point(42, 70);
             this.dgvPost.Name = "dgvPost";
             this.dgvPost.ReadOnly = true;
             this.dgvPost.RowHeadersVisible = false;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvPost.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvPost.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvPost.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPost.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPost.Size = new System.Drawing.Size(934, 268);
@@ -378,40 +417,9 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnCV
-            // 
-            this.btnCV.BackColor = System.Drawing.Color.White;
-            this.btnCV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCV.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCV.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCV.Location = new System.Drawing.Point(697, 468);
-            this.btnCV.Name = "btnCV";
-            this.btnCV.Size = new System.Drawing.Size(190, 30);
-            this.btnCV.TabIndex = 13;
-            this.btnCV.Text = "Seleccionar CV...";
-            this.btnCV.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCV.UseVisualStyleBackColor = false;
-            this.btnCV.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ofd1
             // 
             this.ofd1.FileName = "openFileDialog1";
-            // 
-            // lbCV
-            // 
-            this.lbCV.AutoSize = true;
-            this.lbCV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbCV.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCV.Location = new System.Drawing.Point(760, 515);
-            this.lbCV.Name = "lbCV";
-            this.lbCV.Size = new System.Drawing.Size(55, 19);
-            this.lbCV.TabIndex = 14;
-            this.lbCV.Text = "Ver CV";
-            this.lbCV.Visible = false;
-            this.lbCV.Click += new System.EventHandler(this.lbCV_Click);
             // 
             // postulantes
             // 

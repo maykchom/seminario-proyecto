@@ -14,7 +14,7 @@ namespace capaNegocias
         public static int idPregunta;
         public static DataTable obtenerPuestos(int idPregunta)
         {
-            string cadena = "SELECT * FROM RESPUESTAS WHERE ID_PREGUNTA = "+idPregunta+" ORDER BY VALOR DESC";
+            string cadena = "SELECT * FROM RESPUESTAS WHERE ID_PREGUNTA = "+idPregunta+" AND ID_ESTADO = 1 ORDER BY VALOR DESC";
             return datos.GetDataTable(cadena);
         }
 

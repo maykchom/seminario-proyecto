@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -206,7 +207,20 @@ namespace seminarioProyecto
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
+        {            
+            if (string.IsNullOrWhiteSpace(tbNombre.Text) || string.IsNullOrWhiteSpace(tbApellidos.Text) || string.IsNullOrWhiteSpace(tbDireccion.Text) || string.IsNullOrWhiteSpace(tbCorreo.Text) || string.IsNullOrWhiteSpace(tbTelefono.Text))
+            {
+                MessageBox.Show("No pueden quedar campos vacíos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string patron = @"^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)*(\.[a-zA-Z]{2,})$";
+            if (!Regex.IsMatch(tbCorreo.Text, patron))
+            {
+                MessageBox.Show("El correo electrónico no es válido.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 guardarDocumentoFtp();
@@ -244,7 +258,20 @@ namespace seminarioProyecto
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
-        {
+        {            
+            if (string.IsNullOrWhiteSpace(tbNombre.Text) || string.IsNullOrWhiteSpace(tbApellidos.Text) || string.IsNullOrWhiteSpace(tbDireccion.Text) || string.IsNullOrWhiteSpace(tbCorreo.Text) || string.IsNullOrWhiteSpace(tbTelefono.Text))
+            {
+                MessageBox.Show("No pueden quedar campos vacíos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string patron = @"^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)*(\.[a-zA-Z]{2,})$";
+            if (!Regex.IsMatch(tbCorreo.Text, patron))
+            {
+                MessageBox.Show("El correo electrónico no es válido.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 guardarDocumentoFtp();
@@ -295,6 +322,30 @@ namespace seminarioProyecto
         private void lbCV_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(rutaCV);
+        }
+
+        private void tbTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Evita que se ingresen caracteres que no son letras
+            }
+        }
+
+        private void tbApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Evita que se ingresen caracteres que no son letras
+            }
         }
     }
 }

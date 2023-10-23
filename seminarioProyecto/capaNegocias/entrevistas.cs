@@ -31,5 +31,13 @@ namespace capaNegocias
             return datos.GetDataTable(cadena);
         }
 
+        public static DataTable obtenerPreguntasDisponibles(int idPuesto)
+        {
+            string cadena = "SELECT PR.ID_PREGUNTA " +
+                "FROM puestos AS PU " +
+                "INNER JOIN preguntas AS PR ON PR.ID_PUESTO = PU.ID_PUESTO " +
+                "WHERE PU.ID_PUESTO = "+idPuesto+" AND PR.ID_ESTADO = 1";
+            return datos.GetDataTable(cadena);
+        }
     }
 }

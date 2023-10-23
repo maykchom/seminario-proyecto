@@ -42,9 +42,17 @@ namespace capaNegocias
 
         public static DataTable obtenerConvocatorias(int idPuesto)
         {
-            string strSQL = "SELECT ID_CONVOCATORIA, CONCAT(FECHA_INICIO,' | ',FECHA_FIN) AS Convocatoria " +
+            string strSQL = "SELECT ID_CONVOCATORIA, CONCAT(DATE_FORMAT(FECHA_INICIO, '%d/%m/%Y'),' | ',DATE_FORMAT(FECHA_FIN, '%d/%m/%Y')) AS Convocatoria " +
             "FROM convocatorias " +
             "WHERE ID_PUESTO = " + idPuesto + " AND ID_ESTADO = 1;";
+            return datos.GetDataTable(strSQL);
+        }
+
+        public static DataTable obtenerFechaFin(int idPuesto)
+        {
+            string strSQL = "SELECT FECHA_FIN " +
+            "FROM convocatorias " +
+            "WHERE ID_CONVOCATORIA = " + idPuesto + " AND ID_ESTADO = 1;";
             return datos.GetDataTable(strSQL);
         }
 
