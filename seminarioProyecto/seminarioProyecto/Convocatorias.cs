@@ -18,6 +18,13 @@ namespace seminarioProyecto
         public convocatorias()
         {
             InitializeComponent();
+
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             cargarPuestos(cbPuestoAgregar);           
             cargarConvocatorias();
         }
@@ -83,6 +90,12 @@ namespace seminarioProyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DateTime fechaInicio = dtpFI1.Value;
             DateTime fechaFin = dtpFI2.Value;
             string obser = tbObser1.Text;
@@ -146,7 +159,7 @@ namespace seminarioProyecto
             btnEliminar.Visible = false;
             dtpFI1.Value = DateTime.Now;
             dtpFI2.Value = DateTime.Now;
-            cbPuestoAgregar.SelectedIndex = 0;
+            //cbPuestoAgregar.SelectedIndex = 0;
             tbObser1.Clear();
             dgvConvo.ClearSelection();
             tbObser1.Focus();
@@ -159,6 +172,12 @@ namespace seminarioProyecto
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DateTime fechaInicio = dtpFI1.Value;
             DateTime fechaFin = dtpFI2.Value;
             string obser = tbObser1.Text;
@@ -197,6 +216,12 @@ namespace seminarioProyecto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DialogResult dialogResult = MessageBox.Show("¿Realmente quiere eliminar la convocatoria?", "Eliminar...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {

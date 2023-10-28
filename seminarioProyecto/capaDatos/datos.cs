@@ -18,10 +18,28 @@ namespace capaDatos
         /// </summary>
         /// <param name="strSql"></param>
         /// <returns></returns>
-        public static DataTable GetDataTable(string strSql)
+        /// 
+
+        public static bool VerificarConexion()
         {
             try
             {
+                using (MySqlConnection conexion = new MySqlConnection(cadenaconexion))
+                {
+                    conexion.Open(); // Intenta abrir la conexión
+                    return true; // La conexión se estableció exitosamente
+                }
+            }
+            catch (MySqlException)
+            {
+                return false; // Hubo un error al intentar conectar
+            }
+        }
+
+        public static DataTable GetDataTable(string strSql)
+        {
+            //try
+            //{
 
                 using (MySqlConnection cn = new MySqlConnection(cadenaconexion))
                 {
@@ -37,13 +55,14 @@ namespace capaDatos
 
                     }
                 }
-            }
-            catch (Exception)
-            {
+            //}
+            //catch (Exception)
+            //{
 
-
-                throw;
-            }
+            //    //DataTable dt = new DataTable();
+            //    //return dt;
+            //    throw;
+            //}
         }
         //insert, update, delete
 

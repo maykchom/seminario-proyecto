@@ -27,6 +27,13 @@ namespace seminarioProyecto
         public postulantes()
         {
             InitializeComponent();
+
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             cargarGeneros(cbGenero);
             cargarPostulantes();
         }
@@ -159,7 +166,7 @@ namespace seminarioProyecto
             btnEditar.Visible = false;
             btnEliminar.Visible = false;
 
-            cbGenero.SelectedIndex = 0;
+            //cbGenero.SelectedIndex = 0;
             tbNombre.Clear();
             tbApellidos.Clear();
             dtFechaNac.Value = DateTime.Now;
@@ -207,7 +214,13 @@ namespace seminarioProyecto
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {            
+        {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(tbNombre.Text) || string.IsNullOrWhiteSpace(tbApellidos.Text) || string.IsNullOrWhiteSpace(tbDireccion.Text) || string.IsNullOrWhiteSpace(tbCorreo.Text) || string.IsNullOrWhiteSpace(tbTelefono.Text))
             {
                 MessageBox.Show("No pueden quedar campos vacíos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -258,7 +271,13 @@ namespace seminarioProyecto
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
-        {            
+        {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(tbNombre.Text) || string.IsNullOrWhiteSpace(tbApellidos.Text) || string.IsNullOrWhiteSpace(tbDireccion.Text) || string.IsNullOrWhiteSpace(tbCorreo.Text) || string.IsNullOrWhiteSpace(tbTelefono.Text))
             {
                 MessageBox.Show("No pueden quedar campos vacíos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -286,6 +305,12 @@ namespace seminarioProyecto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DialogResult dialogResult = MessageBox.Show("¿Realmente quiere eliminar al/la postulante?", "Eliminar...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {                

@@ -13,10 +13,10 @@ namespace seminarioProyecto
     public partial class respuestas : Form
     {
         int idPregunta = capaNegocias.respuestas.idPregunta;
+        int idRes;
         public respuestas()
         {
-            InitializeComponent();
-            cargarRespuestas();            
+            InitializeComponent();        
         }
 
         public void cargarRespuestas()
@@ -25,17 +25,25 @@ namespace seminarioProyecto
             dtRespuestas = capaNegocias.respuestas.obtenerPuestos(idPregunta);
             dgvRes.DataSource = dtRespuestas;
 
-            foreach (DataGridViewColumn columna in dgvRes.Columns)
-            {
-                columna.ReadOnly = true;
-            }
-            dgvRes.Columns[1].ReadOnly = false;
-            dgvRes.Columns[2].ReadOnly = false;
+            //foreach (DataGridViewColumn columna in dgvRes.Columns)
+            //{
+            //    columna.ReadOnly = true;
+            //}
+            //dgvRes.Columns[1].ReadOnly = false;
+            //dgvRes.Columns[2].ReadOnly = false;
 
 
             dgvRes.Columns[0].Visible = false;
             dgvRes.Columns[3].Visible = false;
             dgvRes.Columns[4].Visible = false;
+            limpiarSeleccion();
+            btnEditarRes.Visible = false;
+            btnEliminarRes.Visible = false;
+        }
+
+        private void limpiarSeleccion()
+        {
+            dgvRes.ClearSelection();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -59,6 +67,18 @@ namespace seminarioProyecto
 
         private void btnGuardarRes_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbRespuesta.Text))
+            {
+                MessageBox.Show("No pueden quedar vacía la respuesta", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int numeroFilas = dgvRes.Rows.Count;
             if (capaNegocias.respuestas.crearRespuesta(tbRespuesta.Text, (numeroFilas + 1), idPregunta))
             {
@@ -135,6 +155,12 @@ namespace seminarioProyecto
 
         private void btnEditarRes_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (valoresListos())
             {
                 foreach (DataGridViewRow fila in dgvRes.Rows)
@@ -171,5 +197,74 @@ namespace seminarioProyecto
                 MessageBox.Show("El campo valor debe ser numérico entero","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+
+        private void llenarNotas()
+        {
+            for (int i = 0; i < dgvRes.Rows.Count; i++)
+            {
+                dgvRes.Rows[i].Cells[2].Value = (i + 1);
+            }
+
+            foreach (DataGridViewRow fila in dgvRes.Rows)
+            {
+                DataGridViewCell celdaColumna0 = fila.Cells[0];
+                int idRespuesta = (int)celdaColumna0.Value;
+
+                DataGridViewCell celdaColumna1 = fila.Cells[1];
+                string respuesta = celdaColumna1.Value.ToString();
+
+                DataGridViewCell celdaColumna2 = fila.Cells[2];
+                int valor = (int)celdaColumna2.Value;
+                //MessageBox.Show("IdRes: "+idRespuesta+" Respuesta: " + respuesta + " Valor: " + valor);
+                guardarCambios(respuesta, valor, idRespuesta);
+            }
+
+            cargarRespuestas();
+        }
+
+        private void btnEliminarRes_Click(object sender, EventArgs e)
+        {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show("¿Realmente quiere eliminar la respuesta?", "Eliminar...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (capaNegocias.respuestas.eliminarRespuesta(idRes))
+                {
+                    cargarRespuestas();                    
+                    llenarNotas();
+                    
+                    MessageBox.Show("Respuesta eliminada exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Respuesta no eliminada, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dgvRes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowNo;
+            RowNo = e.RowIndex;
+            
+            idRes = Convert.ToInt32(dgvRes.Rows[RowNo].Cells[0].Value);
+            //MessageBox.Show(idRes.ToString());
+        }
+
+        private void respuestas_Load(object sender, EventArgs e)
+        {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            cargarRespuestas();
+        }
+
     }
 }

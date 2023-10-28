@@ -18,6 +18,13 @@ namespace seminarioProyecto
         public entrevista()
         {
             InitializeComponent();
+
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             cargarPuestos(cbPuestos);
         }
 
@@ -87,8 +94,35 @@ namespace seminarioProyecto
             panel1.BringToFront();
         }
 
+        private bool preguntasSinRespuesta()
+        {
+            DataTable dtRes;
+            dtRes = capaNegocias.entrevistas.obtenerTotalResupuestas((int)cbPuestos.SelectedValue);
+
+            // Asumimos que la tercera columna tiene índice 2 (ya que la indexación comienza en 0)
+            int indiceColumna = 2;
+
+            foreach (DataRow fila in dtRes.Rows)
+            {
+                // Verificamos si el valor en la tercera columna es igual a cero
+                if (Convert.ToInt32(fila[indiceColumna]) == 0)
+                {
+                    return true; // Se encontró al menos un cero en la tercera columna
+                }
+            }
+
+            return false; // No se encontraron ceros en la tercera columna
+
+        }
+
         private void btnRealizarEntrevista_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (idEstado != 1)
             {
                 MessageBox.Show("La entrevista ya fué realizada", "Completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,6 +135,12 @@ namespace seminarioProyecto
             if (dtPreguntas.Rows.Count < 3)
             {
                 MessageBox.Show("El puesto debe tener al menos 2 preguntas dispobibles", "Sin preguntas suficientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (preguntasSinRespuesta())
+            {
+                MessageBox.Show("En la entrevista del puesto existe(n) pregunta(s) sin respuestas", "Verifique respuestas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

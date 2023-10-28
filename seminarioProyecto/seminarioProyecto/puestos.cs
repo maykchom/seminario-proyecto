@@ -16,6 +16,13 @@ namespace seminarioProyecto
         public puestos()
         {
             InitializeComponent();
+
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             cargarPuestos();
         }
 
@@ -57,6 +64,18 @@ namespace seminarioProyecto
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbPuesto.Text) || string.IsNullOrWhiteSpace(tbDescripcion.Text) || string.IsNullOrWhiteSpace(tbPerfilPuesto.Text))
+            {
+                MessageBox.Show("No pueden quedar campos vacíos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (capaNegocias.puestos.crearPuesto(tbPuesto.Text, tbDescripcion.Text, tbPerfilPuesto.Text))
             {
                 MessageBox.Show("Puesto agregado exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -92,6 +111,18 @@ namespace seminarioProyecto
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbPuesto.Text) || string.IsNullOrWhiteSpace(tbDescripcion.Text) || string.IsNullOrWhiteSpace(tbPerfilPuesto.Text))
+            {
+                MessageBox.Show("No pueden quedar campos vacíos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (capaNegocias.puestos.editarPuesto(idPuesto, tbPuesto.Text, tbDescripcion.Text, tbPerfilPuesto.Text))
             {
                 MessageBox.Show("Puesto editado exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -106,6 +137,12 @@ namespace seminarioProyecto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DialogResult dialogResult = MessageBox.Show("¿Realmente quiere eliminar el puesto?", "Eliminar...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             { 
@@ -120,6 +157,11 @@ namespace seminarioProyecto
                     MessageBox.Show("No se pudo eliminar el puesto, intente de nuevo ", "Algo sucedió", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void puestos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

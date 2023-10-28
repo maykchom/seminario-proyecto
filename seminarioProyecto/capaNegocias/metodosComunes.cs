@@ -14,5 +14,11 @@ namespace capaNegocias
         {
             return datos.GetDataTable(consulta);
         }
+
+        public static bool verificarConexion()
+        {
+            return datos.VerificarConexion();
+        }
+
     }
 }

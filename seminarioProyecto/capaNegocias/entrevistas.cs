@@ -39,5 +39,16 @@ namespace capaNegocias
                 "WHERE PU.ID_PUESTO = "+idPuesto+" AND PR.ID_ESTADO = 1";
             return datos.GetDataTable(cadena);
         }
+
+        public static DataTable obtenerTotalResupuestas(int idPuesto)
+        {
+            string cadena = "SELECT PR.ID_PREGUNTA, PR.PREGUNTA, COUNT(RE.ID_RESPUESTA) AS TOTALRESPUESTAS " +
+                "FROM puestos AS PU " +
+                "INNER JOIN preguntas AS PR ON PR.ID_PUESTO = PU.ID_PUESTO " +
+                "LEFT JOIN respuestas AS RE ON RE.ID_PREGUNTA = PR.ID_PREGUNTA " +
+                "WHERE PU.ID_PUESTO = "+idPuesto+" AND PR.ID_ESTADO = 1 " +
+                "GROUP BY PR.ID_PREGUNTA";
+            return datos.GetDataTable(cadena);
+        }
     }
 }

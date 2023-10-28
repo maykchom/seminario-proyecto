@@ -41,25 +41,37 @@ namespace seminarioProyecto
 
         private void res_Load(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             cargarPuestos();
+            dgvRes.ClearSelection(); //AGREGADO
         }
 
         private void cbPu_SelectedIndexChanged(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            panel2.Visible = true;
             cargarConvocatorias();
             if (cbCon.Items.Count == 0)
             {
                 button1.Enabled = false;
+                panel2.Visible = true;
             }
             else
             {
-                button1.Enabled = true;
+                //button1.Enabled = true;
+                //panel2.Visible = false;
             }
         }
 
         private void cbCon_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarGrafico();
+            dgvRes.ClearSelection(); //AGREGADO
         }
 
         private void quitarNulos()
@@ -75,17 +87,26 @@ namespace seminarioProyecto
 
         public void cargarGrafico()
         {
-
+            //MessageBox.Show("Se intentó cargar gráfico");
             dtResObt = capaNegocias.resultados.obtenerResultados((int)cbCon.SelectedValue);
             quitarNulos();
 
 
-            string a = "s";
             if (dtResObt.Rows.Count == 0)
             {
+                dgvRes.ClearSelection(); 
+                //AGREGADO
+                //panel2.Visible = true;
+                //button1.Enabled = false;
+                panel2.Visible = true;
+                button1.Enabled = false;
                 MessageBox.Show("No hay resultados de entrevistas para esa convocatoria", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            //MessageBox.Show("Se continuó con el gráfico");
+
+            panel2.Visible = false;
+            button1.Enabled = true;
 
             dgvRes.DataSource = dtResObt;
 
@@ -107,6 +128,17 @@ namespace seminarioProyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (cbPu.Items.Count == 0)
+            {
+                MessageBox.Show("No hay datos", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DataTable dtDatos;
             dtDatos = capaNegocias.metodosComunes.consultaAbiertaSinParametros("SELECT C.ID_CONVOCATORIA, C.FECHA_INICIO, FECHA_FIN, P.TITULO FROM CONVOCATORIAS AS C INNER JOIN puestos AS P ON P.ID_PUESTO = C.ID_PUESTO WHERE ID_CONVOCATORIA = " + cbCon.SelectedValue);
             informe.datos encabezado = new informe.datos();

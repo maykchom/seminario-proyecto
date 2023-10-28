@@ -59,7 +59,7 @@ namespace capaNegocias
         public static DataTable obtenerPostulantes()
         {
             string strSQL = "SELECT ID_POSTULANTE, CONCAT(NOMBRES,' ',APELLIDOS) AS POSTULANTE " +
-            "FROM postulantes " +
+            "FROM postulantes WHERE ID_ESTADO = 1 " +
             "ORDER BY POSTULANTE";
             return datos.GetDataTable(strSQL);
         }

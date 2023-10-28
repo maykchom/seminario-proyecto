@@ -18,6 +18,12 @@ namespace seminarioProyecto
         public confPreguntas()
         {
             InitializeComponent();
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             cargarPuestos(cbPuestos);
         }
 
@@ -119,6 +125,7 @@ namespace seminarioProyecto
             btnRepuestas.Visible = false;
             btnNuevo.Visible = false;
             dgvPreg.ClearSelection();
+            tbPregunta.Focus();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -128,6 +135,18 @@ namespace seminarioProyecto
 
         private void btnGuardarPregunta_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbPregunta.Text))
+            {
+                MessageBox.Show("No pueden quedar campos vacíos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (capaNegocias.preguntas.crearPregunta(tbPregunta.Text, (int)cbPuestos.SelectedValue))
             {                
                 MessageBox.Show("Pregunta agregada exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -141,6 +160,18 @@ namespace seminarioProyecto
 
         private void btnEditarPregunta_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbPregunta.Text))
+            {
+                MessageBox.Show("No pueden quedar campos vacíos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (capaNegocias.preguntas.editarPregunta(tbPregunta.Text, idPregunta))
             {
                 MessageBox.Show("Pregunta editada exitosamente", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -155,6 +186,12 @@ namespace seminarioProyecto
 
         private void btnEliminarPregunta_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DialogResult dialogResult = MessageBox.Show("¿Realmente quiere eliminar la pregunta?", "Eliminar...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
@@ -172,7 +209,13 @@ namespace seminarioProyecto
         }
 
         private void btnRepuestas_Click(object sender, EventArgs e)
-        {            
+        {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             capaNegocias.respuestas.idPregunta = idPregunta;
             abrirFormularioHijo(new respuestas());
             panel1.BringToFront();

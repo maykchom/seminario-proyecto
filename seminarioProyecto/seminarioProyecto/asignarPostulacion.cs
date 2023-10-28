@@ -19,6 +19,13 @@ namespace seminarioProyecto
         public asignarPostulacion()
         {
             InitializeComponent();
+
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             cargarPuestos(cbPuestos);
             cargarPostulantes(cbPostulanteAE);
         }
@@ -137,6 +144,18 @@ namespace seminarioProyecto
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (cbPuestos.Items.Count == 0)
+            {
+                MessageBox.Show("No existen puestos", "Revise...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (convoVacias || postuVacios)
             {
                 MessageBox.Show("No existe convocatorias o pustulantes", "Revise...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -160,6 +179,12 @@ namespace seminarioProyecto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (!capaNegocias.metodosComunes.verificarConexion())
+            {
+                MessageBox.Show("Se perdió la conexión con el servidor", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DialogResult dialogResult = MessageBox.Show("¿Realmente quiere eliminar la postulación?", "Eliminar...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
@@ -183,7 +208,7 @@ namespace seminarioProyecto
             btnEliminar.Visible = false;
 
             dgvPost.ClearSelection();
-            cbPostulanteAE.SelectedIndex = 0;
+            //cbPostulanteAE.SelectedIndex = 0;
         }
 
         private void dgvPost_CellClick(object sender, DataGridViewCellEventArgs e)

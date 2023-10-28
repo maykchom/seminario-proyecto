@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(respuestas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvRes = new System.Windows.Forms.DataGridView();
@@ -70,34 +70,35 @@
             this.dgvRes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRes.BackgroundColor = System.Drawing.Color.White;
             this.dgvRes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRes.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvRes.Location = new System.Drawing.Point(68, 229);
             this.dgvRes.Name = "dgvRes";
             this.dgvRes.RowHeadersVisible = false;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvRes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvRes.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvRes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRes.ShowCellErrors = false;
             this.dgvRes.Size = new System.Drawing.Size(879, 295);
             this.dgvRes.TabIndex = 20;
             this.dgvRes.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvRes_CellBeginEdit);
+            this.dgvRes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRes_CellClick);
             this.dgvRes.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvRes_DataError);
             // 
             // btnGuardarRes
@@ -110,7 +111,7 @@
             this.btnGuardarRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarRes.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnGuardarRes.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarRes.Location = new System.Drawing.Point(767, 136);
+            this.btnGuardarRes.Location = new System.Drawing.Point(767, 149);
             this.btnGuardarRes.Name = "btnGuardarRes";
             this.btnGuardarRes.Size = new System.Drawing.Size(177, 30);
             this.btnGuardarRes.TabIndex = 24;
@@ -125,18 +126,19 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(70, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 16);
+            this.label3.Size = new System.Drawing.Size(110, 16);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Ingresar respuesta:";
+            this.label3.Text = "Ingresar respuesta*";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tbRespuesta
             // 
-            this.tbRespuesta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRespuesta.BackColor = System.Drawing.Color.Gainsboro;
+            this.tbRespuesta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbRespuesta.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRespuesta.Location = new System.Drawing.Point(73, 110);
             this.tbRespuesta.Name = "tbRespuesta";
-            this.tbRespuesta.Size = new System.Drawing.Size(871, 17);
+            this.tbRespuesta.Size = new System.Drawing.Size(871, 24);
             this.tbRespuesta.TabIndex = 21;
             // 
             // btnEditarRes
@@ -177,6 +179,7 @@
             this.btnEliminarRes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEliminarRes.UseVisualStyleBackColor = false;
             this.btnEliminarRes.Visible = false;
+            this.btnEliminarRes.Click += new System.EventHandler(this.btnEliminarRes_Click);
             // 
             // pictureBox2
             // 
@@ -210,6 +213,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "respuestas";
             this.Text = "Respuestas";
+            this.Load += new System.EventHandler(this.respuestas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRes)).EndInit();

@@ -38,5 +38,13 @@ namespace capaNegocias
             return datos.ExecTransactionParameters(cmd);
         }
 
+        public static bool eliminarRespuesta(int idRespuesta)
+        {
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "UPDATE RESPUESTAS SET ID_ESTADO = 2 WHERE ID_RESPUESTA = @idRespuesta";
+            cmd.Parameters.AddWithValue("@idRespuesta", idRespuesta);
+            return datos.ExecTransactionParameters(cmd);
+        }
+
     }
 }

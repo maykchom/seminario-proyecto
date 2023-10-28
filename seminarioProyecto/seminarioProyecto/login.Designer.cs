@@ -67,7 +67,7 @@
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(248, 15);
             this.tbPass.TabIndex = 1;
-            this.tbPass.Text = "password1";
+            this.tbPass.Text = "admin";
             this.tbPass.UseSystemPasswordChar = true;
             // 
             // button1
